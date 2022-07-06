@@ -1,0 +1,597 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HückelSolver &#8212; SHMOT</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More Molecules" href="SHMO_Github_more.html" />
+    <link rel="prev" title="HMOT with Polar Atoms" href="Polar_Atoms_HMOT.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/matrix.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SHMOT</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Start.html">
+   Front Matter
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Basics.html">
+   HMO Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro_to_HMOT.html">
+   HMOT with
+   <em>
+    Python
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Polar_Atoms_HMOT.html">
+   HMOT with Polar Atoms
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   HückelSolver
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SHMO_Github_more.html">
+     More Molecules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SHMO_Github_code.html">
+     The Libraries
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/SHMO_Github_tool.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/barrylinkletter/SHMOT/main?urlpath=tree/docs/SHMO_Github_tool.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-a-huckelsolver-object">
+   Using a HuckelSolver Object
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-import-your-tools">
+     Step 1: Import Your Tools
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-create-the-interaction-matrix">
+     Step 2: Create The Interaction Matrix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-create-the-huckelsolver-object">
+     Step 3: Create the HuckelSolver Object
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-display-and-manipulate-the-result">
+     Step 4: Display and Manipulate the Result
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-challenge">
+   A Challenge
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>HückelSolver</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-a-huckelsolver-object">
+   Using a HuckelSolver Object
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-import-your-tools">
+     Step 1: Import Your Tools
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-create-the-interaction-matrix">
+     Step 2: Create The Interaction Matrix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-create-the-huckelsolver-object">
+     Step 3: Create the HuckelSolver Object
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-display-and-manipulate-the-result">
+     Step 4: Display and Manipulate the Result
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-challenge">
+   A Challenge
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="huckelsolver">
+<h1>HückelSolver<a class="headerlink" href="#huckelsolver" title="Permalink to this headline">¶</a></h1>
+<p>Never reinvent the wheel. I am willimng to bet that every <em>Python</em> program that you plan to make has already already been written. Randal Taylor has written a <em>Python</em> class library that provides tools for calculating parameters of SHMO systems. The code can be obtained at https://github.com/randlet/SHMO</p>
+<p>A <em>class</em> is a data object that includes functions within it that can operate on the data that it contains. Imagine a container that can hold a number but also includes functions for incrementing and decrementing the number by a set value. This could all be wrapped into a class rather than a variable and two separate functions.</p>
+<p>When you call the class function, you create an object with that class (it has all the properties of the class). This is the heart of “object oriented programming”. We dont care about that, we’re just goint to use it.</p>
+<div class="section" id="using-a-huckelsolver-object">
+<h2>Using a HuckelSolver Object<a class="headerlink" href="#using-a-huckelsolver-object" title="Permalink to this headline">¶</a></h2>
+<p>To start, ensure that the shmo.py file is located in the same directory as this notebook.</p>
+<p>We create a HuckelSolver object by calling the HuckelSolver() class function. We provide the Hückel interaction matrix and the number of <span class="math notranslate nohighlight">\(\pi\)</span> electrons. The command <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">HuckelSolver(Array,</span> <span class="pre">Number)</span></code> will create the object <code class="docutils literal notranslate"><span class="pre">z</span></code> that contains all the Huckel parameters for the system defined by the interaction matrix <code class="docutils literal notranslate"><span class="pre">Array</span></code> with <code class="docutils literal notranslate"><span class="pre">Number</span></code> <span class="math notranslate nohighlight">\(\pi\)</span> electrons. <code class="docutils literal notranslate"><span class="pre">Array</span></code> may be any “array-like” object. It can be a list of lists, a <em>NumPy</em> array or a <em>NumPy</em> matrix.</p>
+<p>Once the HuckelSolver object is created from the data, the following properties may be queried.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code></p>
+<ul>
+<li><p>This is the connection matrix that was input into the HuckelSolver class function that created the object being - <code class="docutils literal notranslate"><span class="pre">.num_electrons</span></code></p></li>
+<li><p>An integer for the number of electrons that were used in the creation of the HuckelSolver object.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.energies</span></code></p>
+<ul>
+<li><p>a numpy array of the eigenvalues. These are the relative orbital energies.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.eigen_vectors</span></code></p>
+<ul>
+<li><p>a list of numpy arrays. Each item in the list is a numpy array with orbital coefficients for the corresonding energy in <code class="docutils literal notranslate"><span class="pre">.energies</span></code>. e.g. <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2]</span></code> is the list of coefficients for the orbital with the energy in <code class="docutils literal notranslate"><span class="pre">.energies[2]</span></code>. Each list is ordered according to atoms. So <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2][0]</span></code> is the coefficient on the first (0<span class="math notranslate nohighlight">\(^{th}\)</span>) atom in the list for orbital 2 (which is the 3rd orbital, remember all python lists and arrays begin at position “0”) queried. It is stored as a 2-dimensional numpt array.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.charge_densities</span></code></p>
+<ul>
+<li><p>A numpy array of the <span class="math notranslate nohighlight">\(\pi\)</span> electron density on each atom.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.net_charges</span></code></p>
+<ul>
+<li><p>A numpy array of the net charge (due to <span class="math notranslate nohighlight">\(\pi\)</span> electrons) on each atom.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.bond_orders</span></code></p>
+<ul>
+<li><p>a numpy matrix with bond orders. Look to the cells that correspond to bonds to get the order of the <span class="math notranslate nohighlight">\(\pi\)</span> bond between the two referenced atoms. e.g. cell 2,3 will contain the bon order between atoms 2 and atom 3. cells that do not reference bonds contain values but are not important.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.energy_eigens</span></code></p>
+<ul>
+<li><p>This is a combination of <code class="docutils literal notranslate"><span class="pre">.energies</span></code> and <code class="docutils literal notranslate"><span class="pre">.energies</span></code>. It is a list of lists for each orbital. Each sublist contains the orbital energy and the corresponding array of eigen vectors.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.populated_levels</span></code></p>
+<ul>
+<li><p>This is a subclass that contains three types of data. It is a list of data for each orbital. Each orbital is represented by an object that contains the energy (of the given molecular orbital), eigen vector (orbital coefficients at each atom) and the number of electrons in the orbital.</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="step-1-import-your-tools">
+<h3>Step 1: Import Your Tools<a class="headerlink" href="#step-1-import-your-tools" title="Permalink to this headline">¶</a></h3>
+<p>There is a python package for just about every endeavour. We will use the numpy package to provide array objects and we will use the <em>shmo</em> package that provides the HuckelSolver class function. <em>NumPy</em> is included in most <em>Python</em> distributions. shmo.py can be downloaded from Randal Taylor’s github site at https://github.com/randlet/SHMO</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">shmo</span> <span class="kn">import</span> <span class="n">HuckelSolver</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-2-create-the-interaction-matrix">
+<h3>Step 2: Create The Interaction Matrix<a class="headerlink" href="#step-2-create-the-interaction-matrix" title="Permalink to this headline">¶</a></h3>
+<p>Using the rules of Simplified Hückel Molecular Orbital Theory (SHMO) we can create a 2-dimensional numpy array that represent the bond connectivity for our <span class="math notranslate nohighlight">\(\pi\)</span> system. We can also provide adjustments for heteroatoms as described in the <a class="reference internal" href="Polar_Atoms_HMOT.html"><span class="doc std std-doc">previous chapter</span></a>.</p>
+<p>Below are two options. Execute a single choice of the blocks below and then proceed to step 3. Note that in my examples I am using position zero as the first atom. This matches the way python addresses arrays.</p>
+<div class="figure align-default" id="images-acrolein-butadiene">
+<a class="reference internal image-reference" href="_images/acrolein_butadiene.png"><img alt="_images/acrolein_butadiene.png" src="_images/acrolein_butadiene.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text"><em>Butadiene and Acrolein</em></span><a class="headerlink" href="#images-acrolein-butadiene" title="Permalink to this image">¶</a></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Acrolein</span>
+
+<span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;Acrolein&quot;</span>
+<span class="n">Connections</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">1</span><span class="p">,</span>  <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">0</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">1</span><span class="p">,</span>  <span class="mi">0</span><span class="p">]])</span>
+
+
+
+<span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="n">Connections</span>    <span class="c1"># The HuckelSolver uses negative numbers for some reason.</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Butadiene</span>
+
+<span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;Butadiene&quot;</span>
+<span class="n">Connections</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="n">Connections</span>    <span class="c1"># The HuckelSolver uses negative numbers for some reason.</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-3-create-the-huckelsolver-object">
+<h3>Step 3: Create the HuckelSolver Object<a class="headerlink" href="#step-3-create-the-huckelsolver-object" title="Permalink to this headline">¶</a></h3>
+<p>By inputing the interaction matrix and the number of electrons, the HuckelSolver() function will create an object with all the Hückel calculation results contained within. In the example below we create a HuckelSolver object called <code class="docutils literal notranslate"><span class="pre">Result</span></code> using the interaction matrix, <code class="docutils literal notranslate"><span class="pre">z</span></code>, and the number of <span class="math notranslate nohighlight">\(\pi\)</span> electrons, <code class="docutils literal notranslate"><span class="pre">n</span></code>. We now have all the results. We are done. One line of code performed all the hard work for us. And the tool was written by someone else - sweet!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Result</span> <span class="o">=</span> <span class="n">HuckelSolver</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-4-display-and-manipulate-the-result">
+<h3>Step 4: Display and Manipulate the Result<a class="headerlink" href="#step-4-display-and-manipulate-the-result" title="Permalink to this headline">¶</a></h3>
+<p>We now have all the information we need to interpret a Hückel system. Let us write some code to print out the results. I created a library that contains a single function called <code class="docutils literal notranslate"><span class="pre">Print_It_All()</span></code>. If we pass the HuckelSolver object to this function it will print all the results that we are interested in. The file print_shmo.py contains the code needed. make sure it is in the same directory as this notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">print_shmo</span> <span class="kn">import</span> <span class="n">Print_It_All</span>
+
+<span class="n">Print_It_All</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span> <span class="n">Name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Results for Butadiene 
+
+Energies and Eigenvalues
+from &#39;Result.energies&#39; and &#39;numpy.array(Result.eigen_vectors).T)&#39;
+----------------------------------------
+[-1.618 -0.618  0.618  1.618]
+----------------------------------------
+[[-0.372 -0.602 -0.602 -0.372]
+ [-0.602 -0.372  0.372  0.602]
+ [-0.602  0.372  0.372 -0.602]
+ [-0.372  0.602 -0.602  0.372]]
+
+Energies and Probabilities (Magnitudes)
+from &#39;Result.energies&#39; and &#39;numpy.array(Result.eigen_vectors).T)**2&#39;
+----------------------------------------
+[-1.618 -0.618  0.618  1.618]
+----------------------------------------
+[[0.138 0.362 0.362 0.138]
+ [0.362 0.138 0.138 0.362]
+ [0.362 0.138 0.138 0.362]
+ [0.138 0.362 0.362 0.138]]
+
+Electron Densities
+from &#39;Result.charge_densities&#39;
+----------------------------------------
+[-1. -1. -1. -1.]
+
+Net Atomic Charges
+from &#39;Result.net_charges&#39;
+----------------------------------------
+[0. 0. 0. 0.]
+
+Net Molecular Charge: 0.0
+
+Bond Orders
+from &#39;Result.bond_orders&#39;
+----------------------------------------
+[[ 1.     0.894  0.    -0.447]
+ [ 0.894  1.     0.447 -0.   ]
+ [ 0.     0.447  1.     0.894]
+ [-0.447 -0.     0.894  1.   ]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>We essentially wrote a two-line program. The first line used the interaction matrix and number of electrons to create the HuckelSolver object with all the solutions contained inside it. Then the second line printed out that information. Below is an example of the code that was executed above using the butadiene example.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shmo</span><span class="o">,</span> <span class="nn">numpy</span><span class="o">,</span> <span class="nn">print_shmo</span>
+
+<span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;Butadiene&quot;</span>
+<span class="n">Connections</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="n">Connections</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">Result</span> <span class="o">=</span> <span class="n">shmo</span><span class="o">.</span><span class="n">HuckelSolver</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>          <span class="c1"># solve the matrix</span>
+<span class="n">print_shmo</span><span class="o">.</span><span class="n">Print_It_All</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span> <span class="n">Name</span><span class="p">)</span>    <span class="c1"># print out the result </span>
+</pre></div>
+</div>
+<p>We set up the data and then called the two tools that were written for us in advance. <em>Python</em> is very simple when you let other people do all the work. Take advantage of tools that are available and give credit where it is due.</p>
+</div>
+<div class="section" id="a-challenge">
+<h2>A Challenge<a class="headerlink" href="#a-challenge" title="Permalink to this headline">¶</a></h2>
+<p>Download the Jupyter notebook for this chapter and edit it to remove all the stuff you dont want (my boring words, for example). Create a lean and mean SHMOT machine. You now will have a tool for all your future SHMOT calculations. Just change the data and execute the notebook.</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Polar_Atoms_HMOT.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">HMOT with Polar Atoms</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="SHMO_Github_more.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">More Molecules</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Barry Linkletter<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
