@@ -54,7 +54,7 @@ $$
 A_{i,j} = H_{i,j} – E\cdot S_{i,j}
 $$
 
-*H* is the "coulomb integral" and it is given a value of &alpha; when *i = j* and a value of &beta; when *i &ne; j*.  The value of &alpha; can be considered to be the energy of the isolate atomic *p*-orbital. The value of &beta; is the change in the energy with overlap between adjacnet orbitals. We will soon see that the calculate MOs will be above and below the value of &alpha; by some multiple of &beta;.
+*H* is the "coulomb integral" and it is given a value of &alpha; when *i = j* and a value of &beta; when *i &ne; j*.  The value of &alpha; can be considered to be the energy of the isolate atomic *p*-orbital. The value of &beta; is the change in the energy due to overlap between adjacent orbitals. We will soon see that the calculated energy of the MOs will be above and below the value of &alpha; by some multiple of &beta;.
 
 *S* is the "overlap integral" and we define it as having a **value of one** when *i = j* and **zero** when *i &ne; J*. This is another extreme **simplification** that keeps HMOT is the approximation category.
 
@@ -108,7 +108,7 @@ $$
 
 So the energies will be &alpha;, the original starting point, raised or lowered by a multiple of &beta;.
 
-This is not a linear algebra course but if you recall your **linear algebra** you will know that a diagonal matrix represents a set of secular equations and the eigenvalues are the solutions to each equation. Once we have the **eigenvalues**, we can solve the equations and determine the values of the coefficients at each carbon atom in each orbital. 
+This is not a linear algebra course but, if you recall your **linear algebra**, you will know that a diagonal matrix represents a set of secular equations and the eigenvalues are the solutions to each equation. Once we have the **eigenvalues**, we can solve the equations and determine the values of the coefficients at each carbon atom in each orbital. 
 
 We can skip all that with the knowledge that the **eigenvectors** of the matrix are these sets of **coefficients**. There will be an **eigenvalue** for each eigenvector. There will be an energy and a set of coefficients for each molecular orbital. Determining the eigenvectors and eigenvalues of a 4&times;4 matrix is possible using established algorithms. Larger matrices require numerical methods and, fortunately, there is an app for that.
 
@@ -116,14 +116,14 @@ We will use the **tools** in the *NumPy* package to obtain the eigenvalues and t
 
 ## Applying *Python*
 
-Within the *NumPy* package is a function that can calculate the eigenvalues and eigenvectors. The tool is called `eig()` and it is within the *linalg* sublibrary of *NumPy*. You can learn more about it [here](https://numpy.org/doc/stable/reference/generated/numpy.linalg.eig.html). It is a function that will return a list of eigenvalues and a list of eigenvectors. We can call the function as follows.
+Within the *NumPy* package is a **function** that can calculate the eigenvalues and eigenvectors. The tool is called `eig()` and it is within the *linalg* sublibrary of *NumPy*. You can **learn** more about it [here](https://numpy.org/doc/stable/reference/generated/numpy.linalg.eig.html). It is a function that will return a list of **eigenvalues** and a list of **eigenvectors**. We can call the function as follows.
 
 ```
 eigenvalues, eigenvectors = numpy.linalg.eig(matrix)
 ```
 
-In the next chapter I will present a Jupyter notebook in which we use this tool to calculate (estimate) the molecular orbitals in a molecule.
+In the **next chapter** I will present a Jupyter notebook in which we use this tool to calculate (estimate) the **molecular orbitals** in a molecule.
 
 ## Summary
 
-We have briefly explored the background for Hückel molecular orbital theory and constructed an interaction matrix for butadiene. In the end we learned the secret: just make a square matrix with x along the diagonal, the value of one where there is a bond connection and zero everywhere else. Then solve for x. 
+We have briefly explored the background for **Hückel molecular orbital theory** and constructed an **interaction matrix** for butadiene. In the end, we learned this secret: just make a square **matrix** with x along the diagonal, the value of one where there is a bond **connection** and zero everywhere else. Then **solve** for x. 

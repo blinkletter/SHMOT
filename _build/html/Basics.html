@@ -343,7 +343,7 @@ const thebe_selector_output = ".output, .cell_output"
 \[
 A_{i,j} = H_{i,j} – E\cdot S_{i,j}
 \]</div>
-<p><em>H</em> is the “coulomb integral” and it is given a value of α when <em>i = j</em> and a value of β when <em>i ≠ j</em>.  The value of α can be considered to be the energy of the isolate atomic <em>p</em>-orbital. The value of β is the change in the energy with overlap between adjacnet orbitals. We will soon see that the calculate MOs will be above and below the value of α by some multiple of β.</p>
+<p><em>H</em> is the “coulomb integral” and it is given a value of α when <em>i = j</em> and a value of β when <em>i ≠ j</em>.  The value of α can be considered to be the energy of the isolate atomic <em>p</em>-orbital. The value of β is the change in the energy due to overlap between adjacent orbitals. We will soon see that the calculated energy of the MOs will be above and below the value of α by some multiple of β.</p>
 <p><em>S</em> is the “overlap integral” and we define it as having a <strong>value of one</strong> when <em>i = j</em> and <strong>zero</strong> when <em>i ≠ J</em>. This is another extreme <strong>simplification</strong> that keeps HMOT is the approximation category.</p>
 <p><em>E</em> is the <strong>energy</strong> of the system and this is what we are <strong>solving</strong> for. There will be four values of <em>E</em>, one for each molecular orbital.</p>
 <p>So at each <strong>individual</strong> atom (<em>i = j</em>), we will have <span class="math notranslate nohighlight">\(A_{1,1} = \alpha – E\)</span>. When pairs of atoms are <strong>adjacent</strong>, we will have <span class="math notranslate nohighlight">\(A_{1,2} = \beta\)</span>. Now let us enter those values into the interaction matrix.</p>
@@ -389,22 +389,22 @@ x &amp; = \frac{\alpha – E}{\beta} \\
 \end{align*}
 \end{split}\]</div>
 <p>So the energies will be α, the original starting point, raised or lowered by a multiple of β.</p>
-<p>This is not a linear algebra course but if you recall your <strong>linear algebra</strong> you will know that a diagonal matrix represents a set of secular equations and the eigenvalues are the solutions to each equation. Once we have the <strong>eigenvalues</strong>, we can solve the equations and determine the values of the coefficients at each carbon atom in each orbital.</p>
+<p>This is not a linear algebra course but, if you recall your <strong>linear algebra</strong>, you will know that a diagonal matrix represents a set of secular equations and the eigenvalues are the solutions to each equation. Once we have the <strong>eigenvalues</strong>, we can solve the equations and determine the values of the coefficients at each carbon atom in each orbital.</p>
 <p>We can skip all that with the knowledge that the <strong>eigenvectors</strong> of the matrix are these sets of <strong>coefficients</strong>. There will be an <strong>eigenvalue</strong> for each eigenvector. There will be an energy and a set of coefficients for each molecular orbital. Determining the eigenvectors and eigenvalues of a 4×4 matrix is possible using established algorithms. Larger matrices require numerical methods and, fortunately, there is an app for that.</p>
 <p>We will use the <strong>tools</strong> in the <em>NumPy</em> package to obtain the eigenvalues and their corresponding eigenvectors.</p>
 </div>
 </div>
 <div class="section" id="applying-python">
 <h2>Applying <em>Python</em><a class="headerlink" href="#applying-python" title="Permalink to this headline">¶</a></h2>
-<p>Within the <em>NumPy</em> package is a function that can calculate the eigenvalues and eigenvectors. The tool is called <code class="docutils literal notranslate"><span class="pre">eig()</span></code> and it is within the <em>linalg</em> sublibrary of <em>NumPy</em>. You can learn more about it <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.eig.html">here</a>. It is a function that will return a list of eigenvalues and a list of eigenvectors. We can call the function as follows.</p>
+<p>Within the <em>NumPy</em> package is a <strong>function</strong> that can calculate the eigenvalues and eigenvectors. The tool is called <code class="docutils literal notranslate"><span class="pre">eig()</span></code> and it is within the <em>linalg</em> sublibrary of <em>NumPy</em>. You can <strong>learn</strong> more about it <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.eig.html">here</a>. It is a function that will return a list of <strong>eigenvalues</strong> and a list of <strong>eigenvectors</strong>. We can call the function as follows.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In the next chapter I will present a Jupyter notebook in which we use this tool to calculate (estimate) the molecular orbitals in a molecule.</p>
+<p>In the <strong>next chapter</strong> I will present a Jupyter notebook in which we use this tool to calculate (estimate) the <strong>molecular orbitals</strong> in a molecule.</p>
 </div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p>We have briefly explored the background for Hückel molecular orbital theory and constructed an interaction matrix for butadiene. In the end we learned the secret: just make a square matrix with x along the diagonal, the value of one where there is a bond connection and zero everywhere else. Then solve for x.</p>
+<p>We have briefly explored the background for <strong>Hückel molecular orbital theory</strong> and constructed an <strong>interaction matrix</strong> for butadiene. In the end, we learned this secret: just make a square <strong>matrix</strong> with x along the diagonal, the value of one where there is a bond <strong>connection</strong> and zero everywhere else. Then <strong>solve</strong> for x.</p>
 </div>
 </div>
 

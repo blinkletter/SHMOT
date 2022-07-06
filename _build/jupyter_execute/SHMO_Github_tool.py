@@ -3,7 +3,7 @@
 
 # # HückelSolver
 # 
-# Never reinvent the wheel. I am willimng to bet that every *Python* program that you plan to make has already already been written. Randal Taylor has written a *Python* class library that provides tools for calculating parameters of SHMO systems. The code can be obtained at https://github.com/randlet/SHMO
+# Never reinvent the wheel. I am willing to bet that every *Python* program that you plan to make has already already been written. Randal Taylor has written a *Python* class library that provides tools for calculating parameters of SHMO systems. The code can be obtained at https://github.com/randlet/SHMO
 # 
 # A *class* is a data object that includes functions within it that can operate on the data that it contains. Imagine a container that can hold a number but also includes functions for incrementing and decrementing the number by a set value. This could all be wrapped into a class rather than a variable and two separate functions.
 # 
