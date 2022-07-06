@@ -159,9 +159,9 @@ print(f"The coefficents for orbital #{position+1} are: {v[:, position]}")
 
 # ### Rinse & Repeat
 # 
-# Now that you have **made one** molecular orbital, you can **make them all**. Just change the MO choice (MO = 1, MO = 2, etc&hellip;) in the code block above and use the energy and the coefficients to build your **diagram**. Here is my own version. You see that we **start** with four atomic *p*-orbitals at an energy value of &alpha;. When they are **combined**, they form four molecular &pi; orbitals. The **relative energies** are factors of &beta; and the geometries of the orbitals are given by the **coefficients** for each atomic orbital within a &pi; orbital.
+# Now that you have **made one** molecular orbital, you can **make them all**. Just change the MO choice (MO = 1, MO = 2, etc&hellip;) in the code block above and use the energy and the coefficients to build your **diagram**. Below is my own version. You see that we **start** with four atomic *p*-orbitals at an energy value of &alpha;. When they are **combined**, they form four molecular &pi; orbitals. The **relative energies** are factors of &beta; and the geometries of the orbitals are given by the **coefficients** for each atomic orbital within a &pi; orbital.
 # 
-# ```{figure} images/Butadiene_MO_all.png
+# ```{figure} images/Butadiene_MO_all4.png
 # ---
 # width: 450px
 # name: Butadiene_MO_all
@@ -173,7 +173,7 @@ print(f"The coefficents for orbital #{position+1} are: {v[:, position]}")
 # 
 # We can make a visual diagram as above by **inspecting** the energies and the coefficients (the eigenvalues and eigenvectors). We can also get quantitative **information** from the eigenvector matrix about electron density, bond orders, free valence values and more. Its just **math**.
 # 
-# The first important information we need to state is orbital **occupancy**. Butadiene has four electrons in the &pi; system. The **first two** orbitals are occupied and the final two are not, as seen in the diagram above. We can **express** this as an array of values.
+# The first important information we need to state is orbital **occupancy**. Butadiene has four electrons in the &pi; system. The **first two** orbitals are occupied and the final two are not, as seen in the diagram above. We can **express** this as an array of values. 
 
 # In[5]:
 
