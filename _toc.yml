@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: Start
+chapters:
+- file: Basics
+- file: Intro_to_HMOT
+- file: Polar_Atoms_HMOT
+- file: SHMO_Github_tool
+  sections:
+  - file: SHMO_Github_more
+  - file: SHMO_Github_code
