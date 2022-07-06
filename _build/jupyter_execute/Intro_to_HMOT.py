@@ -59,7 +59,7 @@
 # \end{bmatrix}
 # $$
 # 
-#  The eigenvalues of this matrix will correspond to the **relative energy** values above and below &alpha; That energy will be the eigenvalue multiplied by &beta;. 
+#  The eigenvalues of this matrix will correspond to the **relative energy** values above and below &alpha;. That energy will be the eigenvalue multiplied by &beta;. 
 # 
 # The code below will **buid** the matrix as a *NumPy* array.
 
@@ -136,7 +136,7 @@ print(v)
 # In[4]:
 
 
-MO = 4                    # The MO you want to grab
+MO = 2                    # The MO you want to grab
 
 position = MO-1           # location in array (0 is the first position)
 

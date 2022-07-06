@@ -484,7 +484,7 @@ const thebe_selector_output = ".output, .cell_output"
    0        &amp; 0      &amp; 1      &amp;  0 \\
 \end{bmatrix}
 \end{split}\]</div>
-<p>The eigenvalues of this matrix will correspond to the <strong>relative energy</strong> values above and below α That energy will be the eigenvalue multiplied by β.</p>
+<p>The eigenvalues of this matrix will correspond to the <strong>relative energy</strong> values above and below α. That energy will be the eigenvalue multiplied by β.</p>
 <p>The code below will <strong>buid</strong> the matrix as a <em>NumPy</em> array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -587,7 +587,7 @@ orbital coefficents
 <p>We can use the eigenvalue results to <strong>construct</strong> an energy diagram for the π MO system of butadiene. We can also use the coefficients for each atomic <em>p</em>-orbital to make <strong>graphical representations</strong> of the orbitals themselves. For example, the energy of the HOMO (the second lowest MO in this case) is at position 1 (the second position) in the two result arrays. We can <strong>read</strong> the values from the output above or we can display it directly as shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MO</span> <span class="o">=</span> <span class="mi">4</span>                    <span class="c1"># The MO you want to grab</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MO</span> <span class="o">=</span> <span class="mi">2</span>                    <span class="c1"># The MO you want to grab</span>
 
 <span class="n">position</span> <span class="o">=</span> <span class="n">MO</span><span class="o">-</span><span class="mi">1</span>           <span class="c1"># location in array (0 is the first position)</span>
 
@@ -598,9 +598,9 @@ orbital coefficents
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The energy for orbital #4 is alpha+1.618*beta 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The energy for orbital #2 is alpha-0.618*beta 
 
-The coefficents for orbital #4 are: [ 0.372 -0.602  0.602 -0.372]
+The coefficents for orbital #2 are: [-0.602 -0.372  0.372  0.602]
 </pre></div>
 </div>
 </div>
