@@ -3,24 +3,24 @@
 
 # # HMOT with Polar Atoms
 # 
-# We have set up the interaction matrix for butadiene as follows.
+# We have set up the **interaction matrix** for butadiene as follows.
 # 
 # $$
 # \begin{bmatrix}
-#    x        & 1      & 0          &  0 \\
-#     1                       & x  & 1      &  0 \\
-#     0                       & 1      & x &  1 \\
-#     0                       & 0          & 1      &  x  \\
+#     x        & 1      & 0      &  0 \\
+#     1        & x      & 1      &  0 \\
+#     0        & 1      & x      &  1 \\
+#     0        & 0      & 1      &  x \\
 # \end{bmatrix}
 # $$
 # 
-# If we incl;uded an oxygen atom in the structure would we have the same energies and geometries in our orbitals. No, we would not. We can change the matrix to give us more accurate results.
+# If we included an **oxygen atom** in the structure, would we have the same energies and geometries in our orbitals? No, we would not. We can **change the matrix** to give us more accurate results.
 # 
 # ## Atoms Other than Carbon
 # 
-# The atomic *p*-orbitals we all considered to start at an energy value of $\alpha$. Electronegative atoms will have a different energy for *p*-atomic orbitals compared to carbon. They will also have a different overlap with adjacent orbitals due to the different energy level and different size. The coulomb and overlap integrals will be different.
+# The atomic *p*-orbitals were all considered to have an energy value of $\alpha$. **Electronegative atoms** will have a different energy for *p*-atomic orbitals compared to carbon. They will also have a **different overlap** with adjacent orbitals due to the different energy level and different size. The coulomb and overlap integrals will be **different**.
 # 
-# If we declare the original $\alpha$ of a carbon atomic *p*-orbital to be $\alpha_C$, the coulomb integral will become $\alpha_X = \alpha_C + h_X\beta$. The energy will be changed by a factor of $\beta$. The overlap integral will be cganged by a different factor, $k_X$. It becomes $\beta_X=k_X \beta$. The values of $h_X$ and $k_X$ for a given atom, X, have been determined and are available in tables in textbooks and websites. [^ref1] [^ref2] [^ref3]
+# If we declare the original $\alpha$ of a **carbon** atomic *p*-orbital to be $\alpha_C$, the new **coulomb integral** will become $\alpha_X = \alpha_C + h_X\beta$. The **energy** will be changed by a factor of $\beta$. The **overlap integral** will be changed by a different factor, $k_X$. It becomes $\beta_X=k_X \beta$. The values of $h_X$ and $k_X$ for a given atom, X, have been determined and are available in **tables** in textbooks and websites. [^ref1][^ref2][^ref3]
 # 
 # [^ref1]: "A brief review and table of semiempirical parameters used in the Hueckel molecular orbital method", William P. Purcell and Judith A. Singer, *Journal of Chemical & Engineering Data*, **1967**, *12*, 235-246. DOI:10.1021/je60033a020 \[[Link](https://pubs.acs.org/doi/abs/10.1021/je60033a020)\]
 # 
@@ -31,40 +31,40 @@
 # 
 # [^ref4]: Neil Isaacs, *Physical Organic Chemistry, 2nd ed.*, **1995**, Addison Wesley Longman, Harlow Essex, England. ISBN 9780582218635, page 18.
 # 
-# Below is a short table of selected $h_X$ and $k_X$ values (from Isaacs[^ref4]). Note that in the "number of electrons" column, one electron implies the atom is participating in a covalent &pi; bond and two electrons implies that the atom is donating a lone pair into the &pi; system. Also note that the first entry is for *sp<sup>2</sup>* carbon and the values of $h_X$ and $k_X$ will not alter the matrix.
+# Below is a short table of **selected** $h_X$ and $k_X$ values (from Isaacs[^ref4]). Note that in the "number of electrons" column, one electron implies the atom is participating in a **covalent** &pi; bond and two electrons implies that the atom is donating a **lone pair** into the &pi; system. Also note that the first entry is for *sp<sup>2</sup>* carbon and the values of $h_X$ and $k_X$ will not alter the matrix.
 # 
-#  | Atom  | # of $e^-$ | $h_X$ | $k_X$ |
-#  | :---  | :---:       | :---  | :---  |
-#  |   =C  | 1          | 0     | 1.0   |
-#  |   =N  | 1          | 0.5   | 1.0   |
-#  |   –N: | 2          | 0.5   | 0.8   |
-#  |   =O  | 1          | 1.0   | 1.0   |
-#  |   –O: | 2          | 2.0   | 0.8   |
-#  |   –CH<sub>3</sub>  | 2     | 2.0 | 0.7   |
+#  | Atom               | # of $e^-$ | $h_X$ | $k_X$ |
+#  | :---               |    :---:   | :---  | :---  |
+#  |   =C               | 1          | 0     | 1.0   |
+#  |   =N               | 1          | 0.5   | 1.0   |
+#  |   –N:              | 2          | 0.5   | 0.8   |
+#  |   =O               | 1          | 1.0   | 1.0   |
+#  |   –O:              | 2          | 2.0   | 0.8   |
+#  |   –CH<sub>3</sub>  | 2          | 2.0   | 0.7   |
 # 
 # ## Acrolein
 # 
-# We will explore this idea by changing onbe of the carbon atoms in butadiene to an oxygen. We now have acrolein. We will now repeat all the steps for butadiene, but we need to change the interaction matrix to account for the polar atom.
+# We will explore this idea by changing onbe of the carbon atoms in butadiene to an **oxygen**. We now have **acrolein**. We will now **repeat** all the steps for butadiene, but we need to change the interaction matrix to account for the **heteroatom**.
 # 
 # 
 # ### Step 1
 # 
-# Step one is to number the atoms in your &pi; system. We have numbered the carbons of acrolein like so.
+# Step one is to **number** the atoms in your &pi; system. We have numbered the carbons of acrolein like so.
 # 
 # ```{figure} images/Acrolein.png
 # ---
 # width: 150px
-# name: Acrolein
+# name: fig1_1A
 # ---
 # *Butadiene with assigned numbering*
 # ```
 # 
 
-# ### Step 2
+# ## Step 2
 # 
 # We now must create the interaction matrix and then translate it into a **data struture** that we can manipulate in *Python*. We will again be using a *NumPy* **array**. 
 # 
-# Let us start with a simple matrix that defines the connections. We have a matrix of zeros with *x* along the diagonal and values of one where there are bonds. The 4<sup>th</sup> atom is the oxygen.
+# Let us **start** with a simple matrix that defines the connections. We have a matrix of zeros with *x* along the diagonal and values of one where there are bonds. The 4<sup>th</sup> atom is the **oxygen**.
 # 
 # $$
 # \begin{bmatrix}
@@ -75,7 +75,7 @@
 # \end{bmatrix}
 # $$
 # 
-# The polar atom will affect the position in the matrix that it occupies (the *x* and position 4,4) and the adjacent bonds. Recall that we defined $x = \frac{\alpha – E}{\beta}$. And now we must change the value of $\alpha$ by $h_X \beta$. We will have&hellip;
+# The polar atom will **affect** the position in the matrix that it **occupies** (the *x* and position 4,4) and the **adjacent** bonds. Recall that we defined $x = \frac{\alpha – E}{\beta}$. And now we must change the value of $\alpha$ by $h_X \beta$. We will have&hellip;
 # 
 # $$
 # \begin{align*}
@@ -84,22 +84,22 @@
 # \end{align*}
 # $$
 # 
-# You can see that the result of the heteroatom is to change the value of *x*. The new value is $x + h_X$.
+# You can see that the **result** of the heteroatom is to **change** the value of *x*. The new value is $x + h_X$.
 # 
-# For the adjacent atoms we had a value of $\frac{\beta}{\beta}$ or one. Now the adjacent atoms to position 4,4 in the matrix (the oxygen) are set at $\frac{k_X\beta}{\beta}$ or $k_X$.
+# For the **adjacent** atoms we had a value of $\frac{\beta}{\beta}$ or one. Now the atoms adjacent to position 4,4 in the matrix (the oxygen) are **set** at $\frac{k_X\beta}{\beta}$ or $k_X$.
 # 
-# The interaction matrix will now look like this&hellip;
+# The **interaction matrix** will now look like this&hellip;
 # 
 # $$
 # \begin{bmatrix}
-#    x        & 1      & 0      &  0 \\
-#    1        & x      & 1      &  0 \\
-#    0        & 1      & x      &  k_X \\
+#    x        & 1      & 0        &  0        \\
+#    1        & x      & 1        &  0        \\
+#    0        & 1      & x        &  k_X      \\
 #    0        & 0      & k_X      &  x + h_X  \\
 # \end{bmatrix}
 # $$
 # 
-# Results are more accurate when we apply a 10% change to the coulomb integral adjacent to the heteratom. So your matrix could look like the one below. We will use this modification in our calculations.
+# Results are **more accurate** when we apply a 10% change to the coulomb integral adjacent to the heteroatom. So your **matrix** could look like the one below. We will use this **modification** in our calculations.
 # 
 # $$
 # \begin{bmatrix}
@@ -129,11 +129,11 @@ m = numpy.array([[x, 1, 0,       0   ],
 print(m)
 
 
-# ### Step 3
+# ## Step 3
 # 
-# The interaction matrix for acrolein is now complete. Observe that the diagonal is no longer a slash of zeros. The adjacent locations might also have changed but the factor they were multiplied with was 1.0, so they appear unchanged in this case.
+# The interaction matrix for acrolein is now **complete**. Observe that the diagonal is **no longer** a slash of zeros. The adjacent locations might also have changed, but the factor they were **multiplied** with was 1.0, so they **appear** unchanged in this case.
 # 
-# We will now calculate the eigenvalues and eigenvectors. Boom, we're done! The rest of this workbook is just about **interpreting** the results.
+# We will now **calculate** the eigenvalues and eigenvectors. **Boom, we're done!** The rest of this workbook is just about **interpreting** the results.
 
 # In[2]:
 
@@ -145,11 +145,11 @@ print()
 print(v)
 
 
-# The variable `l` is the list of eigenvalues and `v` is the array of eigenvectors. The sign was flipped on the eigenvalues so that the lowest energy orbitals will have negative values.
+# The variable `l` is the **list** of eigenvalues and `v` is the **array** of eigenvectors. The sign was **flipped** on the eigenvalues so that the lowest energy orbitals will have negative values.
 
 # ## Processing the Results
 # 
-# We will sort the energies (eigenvalues) and columns of coefficients (eigenvectors) as we did previously.
+# We will **sort** the energies (eigenvalues) and columns of coefficients (eigenvectors) as we did **previously**.
 
 # In[3]:
 
@@ -171,7 +171,7 @@ print(v)
 
 # ## MO Diagram
 # 
-# We can use the eigenvalue results to construct an energy diagram for the &pi; MO system of acrolein. We can also use the coefficients for each atomic *p*-orbital to make graphical representations of the orbitals themselves. For example, the energy of the HOMO (the second lowest MO in this case) is at position 1 (the second position) in the two arrays. We can read the values from the output above or we can display it directly as shoiwn below.
+# We can use the eigenvalue results to construct an **energy diagram** for the &pi; MO system of acrolein. We can also use the coefficients for each atomic *p*-orbital to make graphical representations of the **orbitals** themselves. For example, the energy of the HOMO (the second lowest MO in this case) is at position 1 (the second position) in the two arrays. We can read the values from the output above or we can **display** it directly as shown below.
 
 # In[4]:
 
@@ -185,34 +185,22 @@ print(f"The energy for orbital #{position+1} is alpha{energy:+.3f}*beta \n")
 print(f"The coefficents for orbital #{position+1} are: {v[:, position]}")
 
 
-# With this information we can construct the molecular orbitals as was demonstrated in the previous butadiene example. Compare the SHMOT results with the surfaces calculated for the molecular orbitals using much more expensive math. I think that the simple diagram derived from the eigenvectors is much more informative. What's your opinion?
-# 
+# With this information, we can **construct** the molecular orbitals as was demonstrated in the previous butadiene example. **Compare** the SHMOT results with the surfaces calculated for the molecular orbitals using much more expensive math. I think that the simple diagram derived from the eigenvectors is much more **informative**. What's your opinion?
+
 # ```{figure} images/Acrolein_MOs.png
 # ---
-# width: 450px
-# name: AMOs2
+# width: 600px
+# name: Acrolein_MOs
 # ---
 # *A molecular orbital diagram of acrolein*
-# ```
-# 
-# 
 
 # ## Calculated Results
-# Let us calculate the electron density and partial charges at each atom. As you may expect, the oxygen will have a slight negative charge and the adjacent carbon will be slightly positive. Also observe how resonance is revealed in the math and the terminal carbon is sharing the charge with the carbonyl carbon.
+# 
+# Let us calculate the **electron density** and partial **charges** at each atom. 
 
-# ### Electron Density
-# For each atom, the electron density is the square of the atomic *p*-orbital coefficient multiplied by number of electrons in each orbital. 
+# ## Electron Density
 # 
-# Thus, the *&pi;*-electron charge density (a misnomer), *q<sub>r</sub>* at atom *r* is given by
-# 
-# $$
-# q_r = \sum_i n_i c_{i,r}^2
-# $$
-# 
-# where *n<sub>i</sub>* is the number of electrons in the *i<sup>th</sup>* molecular orbital and *c<sub>i,r</sub>* is the coefficient of atom *r* in the *i<sup>th</sup>* molecular orbital.
-# 
-# 
-# For butadiene the electron density will be even across all atoms (in the Hückel approiximation) and so all atoms should hace the same charge of zero. 
+# As you may expect, the oxygen will have a **slight negative** charge and the adjacent carbon will be **slightly positive**. Also observe how resonance is revealed in the math and the terminal carbon is **sharing the charge** with the carbonyl carbon.
 
 # In[5]:
 
@@ -236,6 +224,6 @@ print(f"Total charge = {Total_Charge:.1f}")
 
 # ## Summary
 # 
-# We have explored constructing an interaction matrix for a polar molecule and calculating the molecular orbitals using SHMOT. In the example of acrolein we observe that the molecule has an uneven distribution of charge, as expected.
+# We have explored constructing an interaction matrix for a polar molecule and calculating the **molecular orbitals** using SHMOT. In the example of **acrolein** we observe that the molecule has an uneven distribution of charge, as expected.
 
 # 

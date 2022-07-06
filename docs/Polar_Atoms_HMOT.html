@@ -244,17 +244,17 @@ const thebe_selector_output = ".output, .cell_output"
      Step 1
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-2">
-     Step 2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-3">
-     Step 3
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2">
+   Step 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-3">
+   Step 3
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#processing-the-results">
@@ -270,13 +270,11 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#calculated-results">
    Calculated Results
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#electron-density">
-     Electron Density
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electron-density">
+   Electron Density
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -318,17 +316,17 @@ const thebe_selector_output = ".output, .cell_output"
      Step 1
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-2">
-     Step 2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-3">
-     Step 3
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2">
+   Step 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-3">
+   Step 3
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#processing-the-results">
@@ -344,13 +342,11 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#calculated-results">
    Calculated Results
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#electron-density">
-     Electron Density
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electron-density">
+   Electron Density
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -368,22 +364,22 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="hmot-with-polar-atoms">
 <h1>HMOT with Polar Atoms<a class="headerlink" href="#hmot-with-polar-atoms" title="Permalink to this headline">¶</a></h1>
-<p>We have set up the interaction matrix for butadiene as follows.</p>
+<p>We have set up the <strong>interaction matrix</strong> for butadiene as follows.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
-   x        &amp; 1      &amp; 0          &amp;  0 \\
-    1                       &amp; x  &amp; 1      &amp;  0 \\
-    0                       &amp; 1      &amp; x &amp;  1 \\
-    0                       &amp; 0          &amp; 1      &amp;  x  \\
+    x        &amp; 1      &amp; 0      &amp;  0 \\
+    1        &amp; x      &amp; 1      &amp;  0 \\
+    0        &amp; 1      &amp; x      &amp;  1 \\
+    0        &amp; 0      &amp; 1      &amp;  x \\
 \end{bmatrix}
 \end{split}\]</div>
-<p>If we incl;uded an oxygen atom in the structure would we have the same energies and geometries in our orbitals. No, we would not. We can change the matrix to give us more accurate results.</p>
+<p>If we included an <strong>oxygen atom</strong> in the structure, would we have the same energies and geometries in our orbitals? No, we would not. We can <strong>change the matrix</strong> to give us more accurate results.</p>
 <div class="section" id="atoms-other-than-carbon">
 <h2>Atoms Other than Carbon<a class="headerlink" href="#atoms-other-than-carbon" title="Permalink to this headline">¶</a></h2>
-<p>The atomic <em>p</em>-orbitals we all considered to start at an energy value of <span class="math notranslate nohighlight">\(\alpha\)</span>. Electronegative atoms will have a different energy for <em>p</em>-atomic orbitals compared to carbon. They will also have a different overlap with adjacent orbitals due to the different energy level and different size. The coulomb and overlap integrals will be different.</p>
-<p>If we declare the original <span class="math notranslate nohighlight">\(\alpha\)</span> of a carbon atomic <em>p</em>-orbital to be <span class="math notranslate nohighlight">\(\alpha_C\)</span>, the coulomb integral will become <span class="math notranslate nohighlight">\(\alpha_X = \alpha_C + h_X\beta\)</span>. The energy will be changed by a factor of <span class="math notranslate nohighlight">\(\beta\)</span>. The overlap integral will be cganged by a different factor, <span class="math notranslate nohighlight">\(k_X\)</span>. It becomes <span class="math notranslate nohighlight">\(\beta_X=k_X \beta\)</span>. The values of <span class="math notranslate nohighlight">\(h_X\)</span> and <span class="math notranslate nohighlight">\(k_X\)</span> for a given atom, X, have been determined and are available in tables in textbooks and websites. <a class="footnote-reference brackets" href="#ref1" id="id1">1</a> <a class="footnote-reference brackets" href="#ref2" id="id2">2</a> <a class="footnote-reference brackets" href="#ref3" id="id3">3</a></p>
-<p>Below is a short table of selected <span class="math notranslate nohighlight">\(h_X\)</span> and <span class="math notranslate nohighlight">\(k_X\)</span> values (from Isaacs<a class="footnote-reference brackets" href="#ref4" id="id4">4</a>). Note that in the “number of electrons” column, one electron implies the atom is participating in a covalent π bond and two electrons implies that the atom is donating a lone pair into the π system. Also note that the first entry is for <em>sp<sup>2</sup></em> carbon and the values of <span class="math notranslate nohighlight">\(h_X\)</span> and <span class="math notranslate nohighlight">\(k_X\)</span> will not alter the matrix.</p>
+<p>The atomic <em>p</em>-orbitals were all considered to have an energy value of <span class="math notranslate nohighlight">\(\alpha\)</span>. <strong>Electronegative atoms</strong> will have a different energy for <em>p</em>-atomic orbitals compared to carbon. They will also have a <strong>different overlap</strong> with adjacent orbitals due to the different energy level and different size. The coulomb and overlap integrals will be <strong>different</strong>.</p>
+<p>If we declare the original <span class="math notranslate nohighlight">\(\alpha\)</span> of a <strong>carbon</strong> atomic <em>p</em>-orbital to be <span class="math notranslate nohighlight">\(\alpha_C\)</span>, the new <strong>coulomb integral</strong> will become <span class="math notranslate nohighlight">\(\alpha_X = \alpha_C + h_X\beta\)</span>. The <strong>energy</strong> will be changed by a factor of <span class="math notranslate nohighlight">\(\beta\)</span>. The <strong>overlap integral</strong> will be changed by a different factor, <span class="math notranslate nohighlight">\(k_X\)</span>. It becomes <span class="math notranslate nohighlight">\(\beta_X=k_X \beta\)</span>. The values of <span class="math notranslate nohighlight">\(h_X\)</span> and <span class="math notranslate nohighlight">\(k_X\)</span> for a given atom, X, have been determined and are available in <strong>tables</strong> in textbooks and websites. <a class="footnote-reference brackets" href="#ref1" id="id1">1</a><a class="footnote-reference brackets" href="#ref2" id="id2">2</a><a class="footnote-reference brackets" href="#ref3" id="id3">3</a></p>
+<p>Below is a short table of <strong>selected</strong> <span class="math notranslate nohighlight">\(h_X\)</span> and <span class="math notranslate nohighlight">\(k_X\)</span> values (from Isaacs<a class="footnote-reference brackets" href="#ref4" id="id4">4</a>). Note that in the “number of electrons” column, one electron implies the atom is participating in a <strong>covalent</strong> π bond and two electrons implies that the atom is donating a <strong>lone pair</strong> into the π system. Also note that the first entry is for <em>sp<sup>2</sup></em> carbon and the values of <span class="math notranslate nohighlight">\(h_X\)</span> and <span class="math notranslate nohighlight">\(k_X\)</span> will not alter the matrix.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Atom</p></th>
@@ -428,19 +424,20 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="acrolein">
 <h2>Acrolein<a class="headerlink" href="#acrolein" title="Permalink to this headline">¶</a></h2>
-<p>We will explore this idea by changing onbe of the carbon atoms in butadiene to an oxygen. We now have acrolein. We will now repeat all the steps for butadiene, but we need to change the interaction matrix to account for the polar atom.</p>
+<p>We will explore this idea by changing onbe of the carbon atoms in butadiene to an <strong>oxygen</strong>. We now have <strong>acrolein</strong>. We will now <strong>repeat</strong> all the steps for butadiene, but we need to change the interaction matrix to account for the <strong>heteroatom</strong>.</p>
 <div class="section" id="step-1">
 <h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">¶</a></h3>
-<p>Step one is to number the atoms in your π system. We have numbered the carbons of acrolein like so.</p>
-<div class="figure align-default" id="id5">
+<p>Step one is to <strong>number</strong> the atoms in your π system. We have numbered the carbons of acrolein like so.</p>
+<div class="figure align-default" id="fig1-1a">
 <a class="reference internal image-reference" href="_images/Acrolein.png"><img alt="_images/Acrolein.png" src="_images/Acrolein.png" style="width: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text"><em>Butadiene with assigned numbering</em></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text"><em>Butadiene with assigned numbering</em></span><a class="headerlink" href="#fig1-1a" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 <div class="section" id="step-2">
-<h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h3>
+<h2>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h2>
 <p>We now must create the interaction matrix and then translate it into a <strong>data struture</strong> that we can manipulate in <em>Python</em>. We will again be using a <em>NumPy</em> <strong>array</strong>.</p>
-<p>Let us start with a simple matrix that defines the connections. We have a matrix of zeros with <em>x</em> along the diagonal and values of one where there are bonds. The 4<sup>th</sup> atom is the oxygen.</p>
+<p>Let us <strong>start</strong> with a simple matrix that defines the connections. We have a matrix of zeros with <em>x</em> along the diagonal and values of one where there are bonds. The 4<sup>th</sup> atom is the <strong>oxygen</strong>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
@@ -450,7 +447,7 @@ const thebe_selector_output = ".output, .cell_output"
    0        &amp; 0      &amp; 1      &amp;  x \\
 \end{bmatrix}
 \end{split}\]</div>
-<p>The polar atom will affect the position in the matrix that it occupies (the <em>x</em> and position 4,4) and the adjacent bonds. Recall that we defined <span class="math notranslate nohighlight">\(x = \frac{\alpha – E}{\beta}\)</span>. And now we must change the value of <span class="math notranslate nohighlight">\(\alpha\)</span> by <span class="math notranslate nohighlight">\(h_X \beta\)</span>. We will have…</p>
+<p>The polar atom will <strong>affect</strong> the position in the matrix that it <strong>occupies</strong> (the <em>x</em> and position 4,4) and the <strong>adjacent</strong> bonds. Recall that we defined <span class="math notranslate nohighlight">\(x = \frac{\alpha – E}{\beta}\)</span>. And now we must change the value of <span class="math notranslate nohighlight">\(\alpha\)</span> by <span class="math notranslate nohighlight">\(h_X \beta\)</span>. We will have…</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -458,19 +455,19 @@ x &amp; = \frac{\alpha + h_X \beta – E}{\beta} \\
 \therefore x &amp; = \frac{\alpha – E}{\beta} + h_X 
 \end{align*}
 \end{split}\]</div>
-<p>You can see that the result of the heteroatom is to change the value of <em>x</em>. The new value is <span class="math notranslate nohighlight">\(x + h_X\)</span>.</p>
-<p>For the adjacent atoms we had a value of <span class="math notranslate nohighlight">\(\frac{\beta}{\beta}\)</span> or one. Now the adjacent atoms to position 4,4 in the matrix (the oxygen) are set at <span class="math notranslate nohighlight">\(\frac{k_X\beta}{\beta}\)</span> or <span class="math notranslate nohighlight">\(k_X\)</span>.</p>
-<p>The interaction matrix will now look like this…</p>
+<p>You can see that the <strong>result</strong> of the heteroatom is to <strong>change</strong> the value of <em>x</em>. The new value is <span class="math notranslate nohighlight">\(x + h_X\)</span>.</p>
+<p>For the <strong>adjacent</strong> atoms we had a value of <span class="math notranslate nohighlight">\(\frac{\beta}{\beta}\)</span> or one. Now the atoms adjacent to position 4,4 in the matrix (the oxygen) are <strong>set</strong> at <span class="math notranslate nohighlight">\(\frac{k_X\beta}{\beta}\)</span> or <span class="math notranslate nohighlight">\(k_X\)</span>.</p>
+<p>The <strong>interaction matrix</strong> will now look like this…</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
-   x        &amp; 1      &amp; 0      &amp;  0 \\
-   1        &amp; x      &amp; 1      &amp;  0 \\
-   0        &amp; 1      &amp; x      &amp;  k_X \\
+   x        &amp; 1      &amp; 0        &amp;  0        \\
+   1        &amp; x      &amp; 1        &amp;  0        \\
+   0        &amp; 1      &amp; x        &amp;  k_X      \\
    0        &amp; 0      &amp; k_X      &amp;  x + h_X  \\
 \end{bmatrix}
 \end{split}\]</div>
-<p>Results are more accurate when we apply a 10% change to the coulomb integral adjacent to the heteratom. So your matrix could look like the one below. We will use this modification in our calculations.</p>
+<p>Results are <strong>more accurate</strong> when we apply a 10% change to the coulomb integral adjacent to the heteroatom. So your <strong>matrix</strong> could look like the one below. We will use this <strong>modification</strong> in our calculations.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
@@ -509,9 +506,9 @@ x &amp; = \frac{\alpha + h_X \beta – E}{\beta} \\
 </div>
 </div>
 <div class="section" id="step-3">
-<h3>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h3>
-<p>The interaction matrix for acrolein is now complete. Observe that the diagonal is no longer a slash of zeros. The adjacent locations might also have changed but the factor they were multiplied with was 1.0, so they appear unchanged in this case.</p>
-<p>We will now calculate the eigenvalues and eigenvectors. Boom, we’re done! The rest of this workbook is just about <strong>interpreting</strong> the results.</p>
+<h2>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h2>
+<p>The interaction matrix for acrolein is now <strong>complete</strong>. Observe that the diagonal is <strong>no longer</strong> a slash of zeros. The adjacent locations might also have changed, but the factor they were <strong>multiplied</strong> with was 1.0, so they <strong>appear</strong> unchanged in this case.</p>
+<p>We will now <strong>calculate</strong> the eigenvalues and eigenvectors. <strong>Boom, we’re done!</strong> The rest of this workbook is just about <strong>interpreting</strong> the results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
@@ -533,12 +530,11 @@ x &amp; = \frac{\alpha + h_X \beta – E}{\beta} \\
 </div>
 </div>
 </div>
-<p>The variable <code class="docutils literal notranslate"><span class="pre">l</span></code> is the list of eigenvalues and <code class="docutils literal notranslate"><span class="pre">v</span></code> is the array of eigenvectors. The sign was flipped on the eigenvalues so that the lowest energy orbitals will have negative values.</p>
-</div>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">l</span></code> is the <strong>list</strong> of eigenvalues and <code class="docutils literal notranslate"><span class="pre">v</span></code> is the <strong>array</strong> of eigenvectors. The sign was <strong>flipped</strong> on the eigenvalues so that the lowest energy orbitals will have negative values.</p>
 </div>
 <div class="section" id="processing-the-results">
 <h2>Processing the Results<a class="headerlink" href="#processing-the-results" title="Permalink to this headline">¶</a></h2>
-<p>We will sort the energies (eigenvalues) and columns of coefficients (eigenvectors) as we did previously.</p>
+<p>We will <strong>sort</strong> the energies (eigenvalues) and columns of coefficients (eigenvectors) as we did <strong>previously</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">order</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="c1"># create an array that represents the order of the values</span>
@@ -572,7 +568,7 @@ orbital coefficents
 </div>
 <div class="section" id="mo-diagram">
 <h2>MO Diagram<a class="headerlink" href="#mo-diagram" title="Permalink to this headline">¶</a></h2>
-<p>We can use the eigenvalue results to construct an energy diagram for the π MO system of acrolein. We can also use the coefficients for each atomic <em>p</em>-orbital to make graphical representations of the orbitals themselves. For example, the energy of the HOMO (the second lowest MO in this case) is at position 1 (the second position) in the two arrays. We can read the values from the output above or we can display it directly as shoiwn below.</p>
+<p>We can use the eigenvalue results to construct an <strong>energy diagram</strong> for the π MO system of acrolein. We can also use the coefficients for each atomic <em>p</em>-orbital to make graphical representations of the <strong>orbitals</strong> themselves. For example, the energy of the HOMO (the second lowest MO in this case) is at position 1 (the second position) in the two arrays. We can read the values from the output above or we can <strong>display</strong> it directly as shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MO</span> <span class="o">=</span> <span class="mi">2</span>                    <span class="c1"># The MO you want to grab</span>
@@ -593,25 +589,19 @@ The coefficents for orbital #2 are: [-0.577 -0.577  0.     0.577]
 </div>
 </div>
 </div>
-<p>With this information we can construct the molecular orbitals as was demonstrated in the previous butadiene example. Compare the SHMOT results with the surfaces calculated for the molecular orbitals using much more expensive math. I think that the simple diagram derived from the eigenvectors is much more informative. What’s your opinion?</p>
-<div class="figure align-default" id="amos2">
-<a class="reference internal image-reference" href="_images/Acrolein_MOs.png"><img alt="_images/Acrolein_MOs.png" src="_images/Acrolein_MOs.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text"><em>A molecular orbital diagram of acrolein</em></span><a class="headerlink" href="#amos2" title="Permalink to this image">¶</a></p>
+<p>With this information, we can <strong>construct</strong> the molecular orbitals as was demonstrated in the previous butadiene example. <strong>Compare</strong> the SHMOT results with the surfaces calculated for the molecular orbitals using much more expensive math. I think that the simple diagram derived from the eigenvectors is much more <strong>informative</strong>. What’s your opinion?</p>
+<div class="figure align-default" id="acrolein-mos">
+<a class="reference internal image-reference" href="_images/Acrolein_MOs.png"><img alt="_images/Acrolein_MOs.png" src="_images/Acrolein_MOs.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text"><em>A molecular orbital diagram of acrolein</em></span><a class="headerlink" href="#acrolein-mos" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="calculated-results">
 <h2>Calculated Results<a class="headerlink" href="#calculated-results" title="Permalink to this headline">¶</a></h2>
-<p>Let us calculate the electron density and partial charges at each atom. As you may expect, the oxygen will have a slight negative charge and the adjacent carbon will be slightly positive. Also observe how resonance is revealed in the math and the terminal carbon is sharing the charge with the carbonyl carbon.</p>
+<p>Let us calculate the <strong>electron density</strong> and partial <strong>charges</strong> at each atom.</p>
+</div>
 <div class="section" id="electron-density">
-<h3>Electron Density<a class="headerlink" href="#electron-density" title="Permalink to this headline">¶</a></h3>
-<p>For each atom, the electron density is the square of the atomic <em>p</em>-orbital coefficient multiplied by number of electrons in each orbital.</p>
-<p>Thus, the <em>π</em>-electron charge density (a misnomer), <em>q<sub>r</sub></em> at atom <em>r</em> is given by</p>
-<div class="math notranslate nohighlight">
-\[
-q_r = \sum_i n_i c_{i,r}^2
-\]</div>
-<p>where <em>n<sub>i</sub></em> is the number of electrons in the <em>i<sup>th</sup></em> molecular orbital and <em>c<sub>i,r</sub></em> is the coefficient of atom <em>r</em> in the <em>i<sup>th</sup></em> molecular orbital.</p>
-<p>For butadiene the electron density will be even across all atoms (in the Hückel approiximation) and so all atoms should hace the same charge of zero.</p>
+<h2>Electron Density<a class="headerlink" href="#electron-density" title="Permalink to this headline">¶</a></h2>
+<p>As you may expect, the oxygen will have a <strong>slight negative</strong> charge and the adjacent carbon will be <strong>slightly positive</strong>. Also observe how resonance is revealed in the math and the terminal carbon is <strong>sharing the charge</strong> with the carbonyl carbon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Filled</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>                                               <span class="c1"># locations of electrons</span>
@@ -645,10 +635,9 @@ Total charge = 0.0
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p>We have explored constructing an interaction matrix for a polar molecule and calculating the molecular orbitals using SHMOT. In the example of acrolein we observe that the molecule has an uneven distribution of charge, as expected.</p>
+<p>We have explored constructing an interaction matrix for a polar molecule and calculating the <strong>molecular orbitals</strong> using SHMOT. In the example of <strong>acrolein</strong> we observe that the molecule has an uneven distribution of charge, as expected.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="ref1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
