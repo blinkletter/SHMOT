@@ -334,60 +334,60 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="huckelsolver">
 <h1>HückelSolver<a class="headerlink" href="#huckelsolver" title="Permalink to this headline">¶</a></h1>
-<p>Never reinvent the wheel. I am willing to bet that every <em>Python</em> program that you plan to make has already already been written. Randal Taylor has written a <em>Python</em> class library that provides tools for calculating parameters of SHMO systems. The code can be obtained at https://github.com/randlet/SHMO</p>
-<p>A <em>class</em> is a data object that includes functions within it that can operate on the data that it contains. Imagine a container that can hold a number but also includes functions for incrementing and decrementing the number by a set value. This could all be wrapped into a class rather than a variable and two separate functions.</p>
-<p>When you call the class function, you create an object with that class (it has all the properties of the class). This is the heart of “object oriented programming”. We dont care about that, we’re just goint to use it.</p>
+<p>Never reinvent the wheel. I am willing to bet that every <em>Python</em> program that you plan to make has <strong>already</strong> already been written. Randal Taylor has <strong>written</strong> a <em>Python</em> class library that provides tools for <strong>calculating</strong> parameters of SHMO systems. The code can be obtained <a class="reference external" href="https://github.com/randlet/SHMO">here</a></p>
+<p>A <em>class</em> is a <strong>data object</strong> that includes <strong>functions</strong> within it that can operate on the data that it contains. Imagine a <strong>container</strong> that can hold a number but also includes functions for incrementing and decrementing the number by a set value. This could all be wrapped into a <strong>class</strong> rather than a variable and two separate functions.</p>
+<p>When you call the class function, you <strong>create</strong> an object with that class (it has all the properties of the class). This is the heart of “<strong>object oriented programming</strong>”. We don’t care about that, we’re just goint to use it.</p>
 <div class="section" id="using-a-huckelsolver-object">
 <h2>Using a HuckelSolver Object<a class="headerlink" href="#using-a-huckelsolver-object" title="Permalink to this headline">¶</a></h2>
-<p>To start, ensure that the shmo.py file is located in the same directory as this notebook.</p>
-<p>We create a HuckelSolver object by calling the HuckelSolver() class function. We provide the Hückel interaction matrix and the number of <span class="math notranslate nohighlight">\(\pi\)</span> electrons. The command <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">HuckelSolver(Array,</span> <span class="pre">Number)</span></code> will create the object <code class="docutils literal notranslate"><span class="pre">z</span></code> that contains all the Huckel parameters for the system defined by the interaction matrix <code class="docutils literal notranslate"><span class="pre">Array</span></code> with <code class="docutils literal notranslate"><span class="pre">Number</span></code> <span class="math notranslate nohighlight">\(\pi\)</span> electrons. <code class="docutils literal notranslate"><span class="pre">Array</span></code> may be any “array-like” object. It can be a list of lists, a <em>NumPy</em> array or a <em>NumPy</em> matrix.</p>
-<p>Once the HuckelSolver object is created from the data, the following properties may be queried.</p>
+<p>To start, ensure that the <code class="docutils literal notranslate"><span class="pre">shmo.py</span></code> file is located in the <strong>same directory</strong> as this notebook.</p>
+<p>We <strong>create</strong> a HuckelSolver <strong>object</strong> by calling the <code class="docutils literal notranslate"><span class="pre">HuckelSolver()</span></code> class function. We provide the Hückel interaction <strong>matrix</strong> and the <strong>number</strong> of <span class="math notranslate nohighlight">\(\pi\)</span> electrons. The command <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">HuckelSolver(Array,</span> <span class="pre">Number)</span></code> will create the object <code class="docutils literal notranslate"><span class="pre">z</span></code> that contains all the Huckel <strong>parameters</strong> for the system defined by the interaction matrix <code class="docutils literal notranslate"><span class="pre">Array</span></code> with <code class="docutils literal notranslate"><span class="pre">Number</span></code> <span class="math notranslate nohighlight">\(\pi\)</span> electrons. <code class="docutils literal notranslate"><span class="pre">Array</span></code> may be any “array-like” object. It can be a list of lists, a <em>NumPy</em> array or a <em>NumPy</em> matrix.</p>
+<p>Once the HuckelSolver object is created from the data, the following <strong>properties</strong> may be queried.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">data</span></code></p>
 <ul>
-<li><p>This is the connection matrix that was input into the HuckelSolver class function that created the object being - <code class="docutils literal notranslate"><span class="pre">.num_electrons</span></code></p></li>
-<li><p>An integer for the number of electrons that were used in the creation of the HuckelSolver object.</p></li>
+<li><p>This is the <strong>connection matrix</strong> that was input into the HuckelSolver class function that created the object being - <code class="docutils literal notranslate"><span class="pre">.num_electrons</span></code></p></li>
+<li><p>An integer for the <strong>number</strong> of electrons that were used in the creation of the HuckelSolver object.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.energies</span></code></p>
 <ul>
-<li><p>a numpy array of the eigenvalues. These are the relative orbital energies.</p></li>
+<li><p>a numpy array of the <strong>eigenvalues</strong>. These are the relative orbital energies.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.eigen_vectors</span></code></p>
 <ul>
-<li><p>a list of numpy arrays. Each item in the list is a numpy array with orbital coefficients for the corresonding energy in <code class="docutils literal notranslate"><span class="pre">.energies</span></code>. e.g. <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2]</span></code> is the list of coefficients for the orbital with the energy in <code class="docutils literal notranslate"><span class="pre">.energies[2]</span></code>. Each list is ordered according to atoms. So <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2][0]</span></code> is the coefficient on the first (0<span class="math notranslate nohighlight">\(^{th}\)</span>) atom in the list for orbital 2 (which is the 3rd orbital, remember all python lists and arrays begin at position “0”) queried. It is stored as a 2-dimensional numpt array.</p></li>
+<li><p>a list of numpy arrays. Each item in the list is a numpy array with orbital <strong>coefficients</strong> for the corresonding energy in <code class="docutils literal notranslate"><span class="pre">.energies</span></code>. e.g. <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2]</span></code> is the list of coefficients for the orbital with the energy in <code class="docutils literal notranslate"><span class="pre">.energies[2]</span></code>. Each <strong>list</strong> is ordered according to atoms. So <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2][0]</span></code> is the coefficient on the first (0<span class="math notranslate nohighlight">\(^{th}\)</span>) atom in the list for orbital 2 (which is the 3rd orbital, remember all python lists and arrays begin at position “0”) queried. It is stored as a 2-dimensional <em>NumPy</em> array.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.charge_densities</span></code></p>
 <ul>
-<li><p>A numpy array of the <span class="math notranslate nohighlight">\(\pi\)</span> electron density on each atom.</p></li>
+<li><p>A <em>NumPy</em> array of the <span class="math notranslate nohighlight">\(\pi\)</span> electron density on each atom.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.net_charges</span></code></p>
 <ul>
-<li><p>A numpy array of the net charge (due to <span class="math notranslate nohighlight">\(\pi\)</span> electrons) on each atom.</p></li>
+<li><p>A <em>NumPy</em> array of the net charge (due to <span class="math notranslate nohighlight">\(\pi\)</span> electrons) on each atom.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.bond_orders</span></code></p>
 <ul>
-<li><p>a numpy matrix with bond orders. Look to the cells that correspond to bonds to get the order of the <span class="math notranslate nohighlight">\(\pi\)</span> bond between the two referenced atoms. e.g. cell 2,3 will contain the bon order between atoms 2 and atom 3. cells that do not reference bonds contain values but are not important.</p></li>
+<li><p>a <em>NumPy</em> matrix with bond orders. Look to the cells that <strong>correspond</strong> to bonds to get the order of the <span class="math notranslate nohighlight">\(\pi\)</span> bond between the two referenced atoms. e.g. cell 2,3 will contain the bon order between atoms 2 and atom 3. cells that do not reference bonds contain values but are not important.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.energy_eigens</span></code></p>
 <ul>
-<li><p>This is a combination of <code class="docutils literal notranslate"><span class="pre">.energies</span></code> and <code class="docutils literal notranslate"><span class="pre">.energies</span></code>. It is a list of lists for each orbital. Each sublist contains the orbital energy and the corresponding array of eigen vectors.</p></li>
+<li><p>This is a <strong>combination</strong> of <code class="docutils literal notranslate"><span class="pre">.energies</span></code> and <code class="docutils literal notranslate"><span class="pre">.energies</span></code>. It is a list of lists for each orbital. Each sublist contains the orbital energy and the corresponding array of eigen vectors.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.populated_levels</span></code></p>
 <ul>
-<li><p>This is a subclass that contains three types of data. It is a list of data for each orbital. Each orbital is represented by an object that contains the energy (of the given molecular orbital), eigen vector (orbital coefficients at each atom) and the number of electrons in the orbital.</p></li>
+<li><p>This is a subclass that contains <strong>three types of data</strong>. It is a list of data for each orbital. Each orbital is represented by an object that contains the energy (of the given molecular orbital), eigen vector (orbital coefficients at each atom) and the number of electrons in the orbital.</p></li>
 </ul>
 </li>
 </ul>
 <div class="section" id="step-1-import-your-tools">
 <h3>Step 1: Import Your Tools<a class="headerlink" href="#step-1-import-your-tools" title="Permalink to this headline">¶</a></h3>
-<p>There is a python package for just about every endeavour. We will use the numpy package to provide array objects and we will use the <em>shmo</em> package that provides the HuckelSolver class function. <em>NumPy</em> is included in most <em>Python</em> distributions. shmo.py can be downloaded from Randal Taylor’s github site at https://github.com/randlet/SHMO</p>
+<p>There is a <em>Python</em>* package for just about every endeavour. We will use the <em>NumPy</em> package to provide <strong>array objects</strong> and we will use the <em>shmo</em> package that provides the <strong>HuckelSolver class function</strong>. <em>NumPy</em> is included in most <em>Python</em> distributions. <code class="docutils literal notranslate"><span class="pre">shmo.py</span></code> can be downloaded from Randal Taylor’s github site at <a class="reference external" href="https://github.com/randlet/SHMO">https://github.com/randlet/SHMO</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">shmo</span> <span class="kn">import</span> <span class="n">HuckelSolver</span>
@@ -399,8 +399,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="step-2-create-the-interaction-matrix">
 <h3>Step 2: Create The Interaction Matrix<a class="headerlink" href="#step-2-create-the-interaction-matrix" title="Permalink to this headline">¶</a></h3>
-<p>Using the rules of Simplified Hückel Molecular Orbital Theory (SHMO) we can create a 2-dimensional numpy array that represent the bond connectivity for our <span class="math notranslate nohighlight">\(\pi\)</span> system. We can also provide adjustments for heteroatoms as described in the <a class="reference internal" href="Polar_Atoms_HMOT.html"><span class="doc std std-doc">previous chapter</span></a>.</p>
-<p>Below are two options. Execute a single choice of the blocks below and then proceed to step 3. Note that in my examples I am using position zero as the first atom. This matches the way python addresses arrays.</p>
+<p>Using the <strong>rules</strong> of Simplified Hückel Molecular Orbital Theory (SHMO) we can create a 2-dimensional <em>NumPy</em> array that represents the <strong>bond connectivity</strong> for our <span class="math notranslate nohighlight">\(\pi\)</span> system. We can also provide <strong>adjustments</strong> for heteroatoms as described in the <a class="reference internal" href="Polar_Atoms_HMOT.html"><span class="doc std std-doc">previous chapter</span></a>.</p>
+<p>Below are <strong>two options</strong>. Execute a single choice of the blocks below and then proceed to step 3. Note that in these examples, I am using position zero as the first atom. This <strong>matches</strong> the way <em>Python</em> addresses arrays.</p>
 <div class="figure align-default" id="images-acrolein-butadiene">
 <a class="reference internal image-reference" href="_images/acrolein_butadiene.png"><img alt="_images/acrolein_butadiene.png" src="_images/acrolein_butadiene.png" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text"><em>Butadiene and Acrolein</em></span><a class="headerlink" href="#images-acrolein-butadiene" title="Permalink to this image">¶</a></p>
@@ -442,7 +442,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="step-3-create-the-huckelsolver-object">
 <h3>Step 3: Create the HuckelSolver Object<a class="headerlink" href="#step-3-create-the-huckelsolver-object" title="Permalink to this headline">¶</a></h3>
-<p>By inputing the interaction matrix and the number of electrons, the HuckelSolver() function will create an object with all the Hückel calculation results contained within. In the example below we create a HuckelSolver object called <code class="docutils literal notranslate"><span class="pre">Result</span></code> using the interaction matrix, <code class="docutils literal notranslate"><span class="pre">z</span></code>, and the number of <span class="math notranslate nohighlight">\(\pi\)</span> electrons, <code class="docutils literal notranslate"><span class="pre">n</span></code>. We now have all the results. We are done. One line of code performed all the hard work for us. And the tool was written by someone else - sweet!</p>
+<p>By inputing the <strong>interaction matrix</strong> and the <strong>number of electrons</strong>, the HuckelSolver() function will create an object with all the Hückel calculation results contained within. In the example below, we create a HuckelSolver <strong>object</strong> called <code class="docutils literal notranslate"><span class="pre">Result</span></code> using the interaction matrix, <code class="docutils literal notranslate"><span class="pre">z</span></code>, and the number of <span class="math notranslate nohighlight">\(\pi\)</span> electrons, <code class="docutils literal notranslate"><span class="pre">n</span></code>. We now have all the <strong>results</strong>. We are done. One line of code performed all the hard work for us. And the tool was written by <strong>someone else</strong> - sweet!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Result</span> <span class="o">=</span> <span class="n">HuckelSolver</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
@@ -453,7 +453,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="step-4-display-and-manipulate-the-result">
 <h3>Step 4: Display and Manipulate the Result<a class="headerlink" href="#step-4-display-and-manipulate-the-result" title="Permalink to this headline">¶</a></h3>
-<p>We now have all the information we need to interpret a Hückel system. Let us write some code to print out the results. I created a library that contains a single function called <code class="docutils literal notranslate"><span class="pre">Print_It_All()</span></code>. If we pass the HuckelSolver object to this function it will print all the results that we are interested in. The file print_shmo.py contains the code needed. make sure it is in the same directory as this notebook.</p>
+<p>We now have all the information we need to <strong>interpret</strong> a Hückel system. Let us use some code to <strong>print out</strong> the results. I created a <strong>library</strong> that contains a single function called <code class="docutils literal notranslate"><span class="pre">Print_It_All()</span></code>. If we <strong>pass</strong> the HuckelSolver object to this function, it will <strong>print</strong> all the results that we are interested in. The file <code class="docutils literal notranslate"><span class="pre">print_shmo.py</span></code> contains the code needed. Make sure it is in the <strong>same directory</strong> as this notebook.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">print_shmo</span> <span class="kn">import</span> <span class="n">Print_It_All</span>
@@ -512,7 +512,7 @@ from &#39;Result.bond_orders&#39;
 </div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p>We essentially wrote a two-line program. The first line used the interaction matrix and number of electrons to create the HuckelSolver object with all the solutions contained inside it. Then the second line printed out that information. Below is an example of the code that was executed above using the butadiene example.</p>
+<p>We essentially wrote a <strong>two-line program</strong>. The <strong>first</strong> line used the interaction matrix and number of electrons to create the HuckelSolver object with all the solutions contained inside it. Then the <strong>second</strong> line printed out that information. Below is an example of the code that was executed above using the butadiene example.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shmo</span><span class="o">,</span> <span class="nn">numpy</span><span class="o">,</span> <span class="nn">print_shmo</span>
 
 <span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;Butadiene&quot;</span>
@@ -524,11 +524,11 @@ from &#39;Result.bond_orders&#39;
 <span class="n">print_shmo</span><span class="o">.</span><span class="n">Print_It_All</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span> <span class="n">Name</span><span class="p">)</span>    <span class="c1"># print out the result </span>
 </pre></div>
 </div>
-<p>We set up the data and then called the two tools that were written for us in advance. <em>Python</em> is very simple when you let other people do all the work. Take advantage of tools that are available and give credit where it is due.</p>
+<p>We set up the data and then <strong>called</strong> the two <strong>tools</strong> that were written for us in advance. <em>Python</em> is very simple when you let other people do all the work. <strong>Take advantage</strong> of tools that are available and give credit where it is due.</p>
 </div>
 <div class="section" id="a-challenge">
 <h2>A Challenge<a class="headerlink" href="#a-challenge" title="Permalink to this headline">¶</a></h2>
-<p>Download the Jupyter notebook for this chapter and edit it to remove all the stuff you dont want (my boring words, for example). Create a lean and mean SHMOT machine. You now will have a tool for all your future SHMOT calculations. Just change the data and execute the notebook.</p>
+<p><strong>Download</strong> the Jupyter notebook for this chapter and <strong>edit</strong> it to remove all the stuff you dont want (my boring words, for example). Create a <strong>lean and mean</strong> SHMOT machine. You now will have a tool for all your future SHMOT calculations. Just <strong>change</strong> the data and <strong>execute</strong> the notebook.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>

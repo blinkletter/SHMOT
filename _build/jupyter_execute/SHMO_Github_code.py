@@ -3,7 +3,7 @@
 
 # # The Libraries
 # 
-# Below are printouts of the two software libraries for your information. The first, "print_shmo.py", is just a list of commands that I wrote to print out information from the HuckelSolver object. It represents the limits of my *Python* skill set. The second, "shmo.py", is from https://github.com/randlet/SHMO. If this book did not come with the accompanying print_shmo.py and shmo.py files then you will be able to recreate them using the code below.
+# Below are **printouts** of the two software libraries for your information. The first, "print_shmo.py", is just a list of commands that I wrote to print out information from the HuckelSolver object. It represents the limits of my *Python* skill set. The second, "shmo.py", is from <https://github.com/randlet/SHMO>. If this book did not come with the accompanying `print_shmo.py` and `shmo.py` files then you will be able to **recreate** them using the code below.
 
 # **print_shmo.py**
 
