@@ -244,17 +244,17 @@ const thebe_selector_output = ".output, .cell_output"
      Step 1
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2">
+     Step 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3">
+     Step 3
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#step-2">
-   Step 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#step-3">
-   Step 3
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#processing-the-results">
@@ -270,11 +270,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#calculated-results">
    Calculated Results
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#electron-density">
-   Electron Density
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electron-density">
+     Electron Density
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -316,17 +318,17 @@ const thebe_selector_output = ".output, .cell_output"
      Step 1
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2">
+     Step 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3">
+     Step 3
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#step-2">
-   Step 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#step-3">
-   Step 3
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#processing-the-results">
@@ -342,11 +344,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#calculated-results">
    Calculated Results
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#electron-density">
-   Electron Density
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electron-density">
+     Electron Density
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -433,9 +437,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text"><em>Butadiene with assigned numbering</em></span><a class="headerlink" href="#fig1-1a" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-</div>
 <div class="section" id="step-2">
-<h2>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h2>
+<h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h3>
 <p>We now must create the interaction matrix and then translate it into a <strong>data struture</strong> that we can manipulate in <em>Python</em>. We will again be using a <em>NumPy</em> <strong>array</strong>.</p>
 <p>Let us <strong>start</strong> with a simple matrix that defines the connections. We have a matrix of zeros with <em>x</em> along the diagonal and values of one where there are bonds. The 4<sup>th</sup> atom is the <strong>oxygen</strong>.</p>
 <div class="math notranslate nohighlight">
@@ -506,7 +509,7 @@ x &amp; = \frac{\alpha + h_X \beta – E}{\beta} \\
 </div>
 </div>
 <div class="section" id="step-3">
-<h2>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h2>
+<h3>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h3>
 <p>The interaction matrix for acrolein is now <strong>complete</strong>. Observe that the diagonal is <strong>no longer</strong> a slash of zeros. The adjacent locations might also have changed, but the factor they were <strong>multiplied</strong> with was 1.0, so they <strong>appear</strong> unchanged in this case.</p>
 <p>We will now <strong>calculate</strong> the eigenvalues and eigenvectors. <strong>Boom, we’re done!</strong> The rest of this workbook is just about <strong>interpreting</strong> the results.</p>
 <div class="cell docutils container">
@@ -531,6 +534,7 @@ x &amp; = \frac{\alpha + h_X \beta – E}{\beta} \\
 </div>
 </div>
 <p>The variable <code class="docutils literal notranslate"><span class="pre">l</span></code> is the <strong>list</strong> of eigenvalues and <code class="docutils literal notranslate"><span class="pre">v</span></code> is the <strong>array</strong> of eigenvectors. The sign was <strong>flipped</strong> on the eigenvalues so that the lowest energy orbitals will have negative values.</p>
+</div>
 </div>
 <div class="section" id="processing-the-results">
 <h2>Processing the Results<a class="headerlink" href="#processing-the-results" title="Permalink to this headline">¶</a></h2>
@@ -598,9 +602,8 @@ The coefficents for orbital #2 are: [-0.577 -0.577  0.     0.577]
 <div class="section" id="calculated-results">
 <h2>Calculated Results<a class="headerlink" href="#calculated-results" title="Permalink to this headline">¶</a></h2>
 <p>Let us calculate the <strong>electron density</strong> and partial <strong>charges</strong> at each atom.</p>
-</div>
 <div class="section" id="electron-density">
-<h2>Electron Density<a class="headerlink" href="#electron-density" title="Permalink to this headline">¶</a></h2>
+<h3>Electron Density<a class="headerlink" href="#electron-density" title="Permalink to this headline">¶</a></h3>
 <p>As you may expect, the oxygen will have a <strong>slight negative</strong> charge and the adjacent carbon will be <strong>slightly positive</strong>. Also observe how resonance is revealed in the math and the terminal carbon is <strong>sharing the charge</strong> with the carbonyl carbon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -631,6 +634,7 @@ Atom 4: electron density = 1.51, charge = -0.51
 Total electrons = 4.0
 Total charge = 0.0
 </pre></div>
+</div>
 </div>
 </div>
 </div>

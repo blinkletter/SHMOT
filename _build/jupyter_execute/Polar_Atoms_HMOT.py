@@ -60,7 +60,7 @@
 # ```
 # 
 
-# ## Step 2
+# ### Step 2
 # 
 # We now must create the interaction matrix and then translate it into a **data struture** that we can manipulate in *Python*. We will again be using a *NumPy* **array**. 
 # 
@@ -129,7 +129,7 @@ m = numpy.array([[x, 1, 0,       0   ],
 print(m)
 
 
-# ## Step 3
+# ### Step 3
 # 
 # The interaction matrix for acrolein is now **complete**. Observe that the diagonal is **no longer** a slash of zeros. The adjacent locations might also have changed, but the factor they were **multiplied** with was 1.0, so they **appear** unchanged in this case.
 # 
@@ -198,7 +198,7 @@ print(f"The coefficents for orbital #{position+1} are: {v[:, position]}")
 # 
 # Let us calculate the **electron density** and partial **charges** at each atom. 
 
-# ## Electron Density
+# ### Electron Density
 # 
 # As you may expect, the oxygen will have a **slight negative** charge and the adjacent carbon will be **slightly positive**. Also observe how resonance is revealed in the math and the terminal carbon is **sharing the charge** with the carbonyl carbon.
 
