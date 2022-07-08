@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example &#8212; SHMOT</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The Libraries" href="SHMO_Github_code.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/matrix.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SHMOT</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Start.html">
+   Front Matter
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Basics.html">
+   HMO Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro_to_HMOT.html">
+   HMOT with
+   <em>
+    Python
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Polar_Atoms_HMOT.html">
+   HMOT with Polar Atoms
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="SHMO_Github_tool.html">
+   HückelSolver
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SHMO_Github_more.html">
+     More Molecules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SHMO_Github_code.html">
+     The Libraries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Example
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/benzene_cation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/barrylinkletter/SHMOT/main?urlpath=tree/docs/benzene_cation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-benzyl-cation">
+   The Benzyl Cation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-number-the-atoms">
+     Step 1: Number the Atoms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-create-the-interaction-matrix">
+     Step 2: Create The Interaction Matrix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-create-the-huckelsolver-object">
+     Step 3: Create the HuckelSolver Object
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-display-the-result">
+     Step 4: Display  the Result
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mo-diagram">
+   MO Diagram
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bond-orders">
+   Bond Orders
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electron-density">
+   Electron Density
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial-charges">
+   Partial Charges
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-challenge">
+   A Challenge
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#be-prepared">
+   Be Prepared
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Example</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-benzyl-cation">
+   The Benzyl Cation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-number-the-atoms">
+     Step 1: Number the Atoms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-create-the-interaction-matrix">
+     Step 2: Create The Interaction Matrix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-create-the-huckelsolver-object">
+     Step 3: Create the HuckelSolver Object
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-display-the-result">
+     Step 4: Display  the Result
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mo-diagram">
+   MO Diagram
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bond-orders">
+   Bond Orders
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electron-density">
+   Electron Density
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial-charges">
+   Partial Charges
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-challenge">
+   A Challenge
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#be-prepared">
+   Be Prepared
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="example">
+<h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h1>
+<p>How is SHMOT useful? It is mostly a teaching tool. Calculating the coefficients and electronic properties will build a better understanding of conjugation, aromaticity and reactivity. Let us use the example of the benzyl cation.</p>
+<div class="section" id="the-benzyl-cation">
+<h2>The Benzyl Cation<a class="headerlink" href="#the-benzyl-cation" title="Permalink to this headline">¶</a></h2>
+<p>Nothing is as electron withdrawing as a carbocation. The benzyl cation would be an extreme example of an electron-withdrawing group.</p>
+<div class="section" id="step-1-number-the-atoms">
+<h3>Step 1: Number the Atoms<a class="headerlink" href="#step-1-number-the-atoms" title="Permalink to this headline">¶</a></h3>
+<p>We will draw the benzyl cation and number the atoms.</p>
+<div class="figure align-default" id="benzylcation">
+<a class="reference internal image-reference" href="_images/benzylcation.png"><img alt="_images/benzylcation.png" src="_images/benzylcation.png" style="width: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text"><em>The benzyl cation</em></span><a class="headerlink" href="#benzylcation" title="Permalink to this image">¶</a></p>
+</div>
+<p>Is the positive charge really on the atom as shown? HMOT will reveal all.</p>
+</div>
+<div class="section" id="step-2-create-the-interaction-matrix">
+<h3>Step 2: Create The Interaction Matrix<a class="headerlink" href="#step-2-create-the-interaction-matrix" title="Permalink to this headline">¶</a></h3>
+<p>I will copy and paste the python code from the previous chapter for the benzyl cation. I could easily type it in myself but since it already exists I will use it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="c1">## Benzyl Cation</span>
+
+<span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;benzyl cation&quot;</span>
+<span class="n">Connections</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="n">Connections</span>    <span class="c1"># The HuckelSolver uses negative numbers for some reason.</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-3-create-the-huckelsolver-object">
+<h3>Step 3: Create the HuckelSolver Object<a class="headerlink" href="#step-3-create-the-huckelsolver-object" title="Permalink to this headline">¶</a></h3>
+<p>We will use the HuckelSolver tool as before. Boom! Done!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">shmo</span> <span class="kn">import</span> <span class="n">HuckelSolver</span>
+
+<span class="n">Result</span> <span class="o">=</span> <span class="n">HuckelSolver</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-4-display-the-result">
+<h3>Step 4: Display  the Result<a class="headerlink" href="#step-4-display-the-result" title="Permalink to this headline">¶</a></h3>
+<p>We will use my <code class="docutils literal notranslate"><span class="pre">print_shmo.py</span></code> library and the <code class="docutils literal notranslate"><span class="pre">Print_It_All()</span></code> function to access the HMOT results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">print_shmo</span> <span class="kn">import</span> <span class="n">Print_It_All</span>
+
+<span class="n">Print_It_All</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span> <span class="n">Name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Results for benzyl cation 
+
+Energies and Eigenvalues
+from &#39;Result.energies&#39; and &#39;numpy.array(Result.eigen_vectors).T)&#39;
+----------------------------------------
+[-2.101 -1.259 -1.     0.     1.     1.259  2.101]
+----------------------------------------
+[[ 0.238  0.397 -0.    -0.756 -0.     0.397  0.238]
+ [ 0.5    0.5   -0.     0.     0.    -0.5   -0.5  ]
+ [ 0.406  0.116  0.5    0.378  0.5    0.116  0.406]
+ [ 0.354 -0.354  0.5    0.    -0.5    0.354 -0.354]
+ [ 0.337 -0.562  0.    -0.378  0.    -0.562  0.337]
+ [ 0.354 -0.354 -0.5    0.     0.5    0.354 -0.354]
+ [ 0.406  0.116 -0.5    0.378 -0.5    0.116  0.406]]
+
+Energies and Probabilities (Magnitudes)
+from &#39;Result.energies&#39; and &#39;numpy.array(Result.eigen_vectors).T)**2&#39;
+----------------------------------------
+[-2.101 -1.259 -1.     0.     1.     1.259  2.101]
+----------------------------------------
+[[0.057 0.158 0.    0.571 0.    0.158 0.057]
+ [0.25  0.25  0.    0.    0.    0.25  0.25 ]
+ [0.165 0.014 0.25  0.143 0.25  0.014 0.165]
+ [0.125 0.125 0.25  0.    0.25  0.125 0.125]
+ [0.113 0.315 0.    0.143 0.    0.315 0.113]
+ [0.125 0.125 0.25  0.    0.25  0.125 0.125]
+ [0.165 0.014 0.25  0.143 0.25  0.014 0.165]]
+
+Electron Densities
+from &#39;Result.charge_densities&#39;
+----------------------------------------
+[-0.429 -1.    -0.857 -1.    -0.857 -1.    -0.857]
+
+Net Atomic Charges
+from &#39;Result.net_charges&#39;
+----------------------------------------
+[0.571 0.    0.143 0.    0.143 0.    0.143]
+
+Net Molecular Charge: 1.0
+
+Bond Orders
+from &#39;Result.bond_orders&#39;
+----------------------------------------
+[[ 0.429  0.635  0.286 -0.112 -0.286 -0.112  0.286]
+ [ 0.635  1.     0.523  0.    -0.225  0.     0.523]
+ [ 0.286  0.523  0.857  0.705  0.143 -0.295 -0.143]
+ [-0.112  0.     0.705  1.     0.635  0.    -0.295]
+ [-0.286 -0.225  0.143  0.635  0.857  0.635  0.143]
+ [-0.112  0.    -0.295  0.     0.635  1.     0.705]
+ [ 0.286  0.523 -0.143 -0.295  0.143  0.705  0.857]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mo-diagram">
+<h2>MO Diagram<a class="headerlink" href="#mo-diagram" title="Permalink to this headline">¶</a></h2>
+<p>First, lets construct a MO diagram using the coefficients and energies. Observe that the LUMO has the largest coefficients at the benzyl carbon and the <em>ortho</em> and <em>para</em> positions. This where nucleophiles might add into. Nucleophiles will add to the benzyl cation where the largest part of the empty LUMO is located.</p>
+<p>But we are interested in how an EWG affects electrophilic aromatic substitution. The HOMO shows the coefficients are greatest in the <em>meta</em> and <em>ortho</em> positions. We know that EWG deactivate the <em>ortho</em> and <em>para</em> sites and that would leave the <em>meta</em> carbon as the location for electrophilic substitution.</p>
+<div class="figure align-default" id="benzylcationmo">
+<a class="reference internal image-reference" href="_images/benzylcationMO.png"><img alt="_images/benzylcationMO.png" src="_images/benzylcationMO.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text"><em>The benzyl cation Hückel molecular orbital diagram</em></span><a class="headerlink" href="#benzylcationmo" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="bond-orders">
+<h2>Bond Orders<a class="headerlink" href="#bond-orders" title="Permalink to this headline">¶</a></h2>
+<p>In benzene, all the bonds would have a π order of 0.5 and a total bond order of 1.5. I read the data off the tables above and made this image. You can see that there is no longer perfect symmetry but the bonds are still all partialilly double bonds. The bond to the benzyl cation is drawn as a single bond but clearly has significant double bond character due to conjugation.</p>
+<div class="figure align-default" id="benzylcationbondorder">
+<a class="reference internal image-reference" href="_images/benzylcationbondorder.png"><img alt="_images/benzylcationbondorder.png" src="_images/benzylcationbondorder.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text"><em>The bond orders in the benzyl cation HMOT model</em></span><a class="headerlink" href="#benzylcationbondorder" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="electron-density">
+<h2>Electron Density<a class="headerlink" href="#electron-density" title="Permalink to this headline">¶</a></h2>
+<p>I read the reported values for electron density and created this diagram. You can see the greatest electron density where an electrophilic aromatic substitution could take place is the <em>meta</em> position.</p>
+<div class="figure align-default" id="benzylcationelectrondensity">
+<a class="reference internal image-reference" href="_images/benzylcationelectrondensity.png"><img alt="_images/benzylcationelectrondensity.png" src="_images/benzylcationelectrondensity.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text"><em>The electron density in the benzyl cation HMOT model</em></span><a class="headerlink" href="#benzylcationelectrondensity" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="partial-charges">
+<h2>Partial Charges<a class="headerlink" href="#partial-charges" title="Permalink to this headline">¶</a></h2>
+<p>I read the charges from the result data and created the following diagram. We can see that the largest charge is indeed resident on the benzyl carbon. With the positive charge also shared at the ortho and para positions. An electrom deficient carbon is unlikely to attach an electrophile. The <em>meta</em> carbon is all that left.</p>
+<div class="figure align-default" id="benzylcationcharges">
+<a class="reference internal image-reference" href="_images/benzylcationcharges.png"><img alt="_images/benzylcationcharges.png" src="_images/benzylcationcharges.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text"><em>The electron density in the benzyl cation HMOT model</em></span><a class="headerlink" href="#benzylcationcharges" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="a-challenge">
+<h2>A Challenge<a class="headerlink" href="#a-challenge" title="Permalink to this headline">¶</a></h2>
+<p>Repeat the exact calculation above but add two electrons to model the idea of a benzyl anion. That would be a very effective electron dinating group, would it not? What is the HOMO now? Would that HOMO enable electrophilic addition and the <em>ortho</em> and <em>para</em> positions as we would expect? How are charges and electron density affected? What are the bond orders? draw new diagrams to collate this information and draw conclusions.</p>
+<p>Perhaps a better model for an electron donating group would be a methyl group (toluene). Perhaps a better model for an electron withdrawing group would be a carbonyl group (benzaldehyde). Model those and examine the <em>ortho</em>,<em>meta</em>,<em>para</em> changes in the benzene ring.</p>
+<p>We are limited in the choices of structure as we want to keep our Hückel systems simple. We could model nitrobenzene if we wanted to, but the polar parameter adjustments would be more complicated. The references in chapter 3 will give you details about that if you want to go there.</p>
+</div>
+<div class="section" id="be-prepared">
+<h2>Be Prepared<a class="headerlink" href="#be-prepared" title="Permalink to this headline">¶</a></h2>
+<p>We will be discussing the electronic properties of naphthaline and azulene in class. The interaction matrices are all set up for you in chapter 4. Use them and calculate all the properties demonstrated in this worksheet. Make some diagrams and predict the regiochemistry in both cases. Are these molecules non-polar – or are the surprisingly polar?</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="SHMO_Github_code.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The Libraries</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Barry Linkletter<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

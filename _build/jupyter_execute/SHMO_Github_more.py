@@ -73,9 +73,9 @@ n = 6
 # In[5]:
 
 
-## Cumyl Cation
+## Benzyl Cation
 
-Name = "Cumyl cation"
+Name = "benzyl cation"
 Connections = numpy.array([[0,1,0,0,0,0,0],
                            [1,0,1,0,0,0,1],
                            [0,1,0,1,0,0,0],
