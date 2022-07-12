@@ -339,9 +339,9 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="huckelsolver">
 <h1>HückelSolver<a class="headerlink" href="#huckelsolver" title="Permalink to this headline">¶</a></h1>
-<p>Never reinvent the wheel. I am willing to bet that every <em>Python</em> program that you plan to make has <strong>already</strong> already been written. Randal Taylor has <strong>written</strong> a <em>Python</em> class library that provides tools for <strong>calculating</strong> parameters of SHMO systems. The code can be obtained <a class="reference external" href="https://github.com/randlet/SHMO">here</a></p>
+<p>Never reinvent the wheel. I am willing to bet that every <em>Python</em> program that you plan to make has <strong>already</strong> been written. Randal Taylor has <strong>written</strong> a <em>Python</em> class library that provides tools for <strong>calculating</strong> parameters of SHMO systems. The code can be obtained <a class="reference external" href="https://github.com/randlet/SHMO">here</a></p>
 <p>A <em>class</em> is a <strong>data object</strong> that includes <strong>functions</strong> within it that can operate on the data that it contains. Imagine a <strong>container</strong> that can hold a number but also includes functions for incrementing and decrementing the number by a set value. This could all be wrapped into a <strong>class</strong> rather than a variable and two separate functions.</p>
-<p>When you call the class function, you <strong>create</strong> an object with that class (it has all the properties of the class). This is the heart of “<strong>object oriented programming</strong>”. We don’t care about that, we’re just goint to use it.</p>
+<p>When you call the class function, you <strong>create</strong> an object with that class (it has all the properties of the class). This is the heart of “<strong>object oriented programming</strong>”. We don’t care about that, we’re just going to use it.</p>
 <div class="section" id="using-a-huckelsolver-object">
 <h2>Using a HuckelSolver Object<a class="headerlink" href="#using-a-huckelsolver-object" title="Permalink to this headline">¶</a></h2>
 <p>To start, ensure that the <code class="docutils literal notranslate"><span class="pre">shmo.py</span></code> file is located in the <strong>same directory</strong> as this notebook.</p>
@@ -350,18 +350,22 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">data</span></code></p>
 <ul>
-<li><p>This is the <strong>connection matrix</strong> that was input into the HuckelSolver class function that created the object being - <code class="docutils literal notranslate"><span class="pre">.num_electrons</span></code></p></li>
+<li><p>This is the <strong>connection matrix</strong> that was input into the HuckelSolver class function that created the object being queried.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.num_electrons</span></code></p>
+<ul>
 <li><p>An integer for the <strong>number</strong> of electrons that were used in the creation of the HuckelSolver object.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.energies</span></code></p>
 <ul>
-<li><p>a numpy array of the <strong>eigenvalues</strong>. These are the relative orbital energies.</p></li>
+<li><p>a <em>NumPy</em> array of the <strong>eigenvalues</strong>. These are the relative orbital energies.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.eigen_vectors</span></code></p>
 <ul>
-<li><p>a list of numpy arrays. Each item in the list is a numpy array with orbital <strong>coefficients</strong> for the corresonding energy in <code class="docutils literal notranslate"><span class="pre">.energies</span></code>. e.g. <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2]</span></code> is the list of coefficients for the orbital with the energy in <code class="docutils literal notranslate"><span class="pre">.energies[2]</span></code>. Each <strong>list</strong> is ordered according to atoms. So <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2][0]</span></code> is the coefficient on the first (0<span class="math notranslate nohighlight">\(^{th}\)</span>) atom in the list for orbital 2 (which is the 3rd orbital, remember all python lists and arrays begin at position “0”) queried. It is stored as a 2-dimensional <em>NumPy</em> array.</p></li>
+<li><p>a list of <em>NumPy</em> arrays. Each item in the list is a <em>NumPy</em> array with orbital <strong>coefficients</strong> for the corresonding energy in <code class="docutils literal notranslate"><span class="pre">.energies</span></code>. e.g. <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2]</span></code> is the list of coefficients for the orbital with the energy in <code class="docutils literal notranslate"><span class="pre">.energies[2]</span></code>. Each <strong>list</strong> is ordered according to atoms. So <code class="docutils literal notranslate"><span class="pre">.eigen_vectors[2][0]</span></code> is the coefficient on the first (0<span class="math notranslate nohighlight">\(^{th}\)</span>) atom in the list for orbital 2 (which is the 3rd orbital, remember all python lists and arrays begin at position “0”) queried. It is stored as a 2-dimensional <em>NumPy</em> array.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.charge_densities</span></code></p>

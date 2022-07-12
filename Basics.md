@@ -56,7 +56,7 @@ $$
 
 *H* is the "coulomb integral" and it is given a **value** of &alpha; when *i = j* and a value of &beta; when *i &ne; j*.  The value of &alpha; can be considered to be the energy of the isolate atomic *p*-orbital. The **value** of &beta; is the change in the energy due to overlap between adjacent orbitals. We will soon see that the calculated energy of the MOs will be above and below the **value** of &alpha; by some multiple of &beta;.
 
-*S* is the "overlap integral" and we define it as having a **value of one** when *i = j* and **zero** when *i &ne; J*. This is another extreme **simplification** that keeps HMOT is the approximation category.
+*S* is the "overlap integral" and we define it as having a **value of one** when *i = j* and **zero** when *i &ne; J*. This is another extreme **simplification** that keeps HMOT in the approximation category.
 
 *E* is the **energy** of the system and this is what we are **solving** for. There will be four values of *E*, one for each molecular orbital.
 

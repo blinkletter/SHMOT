@@ -126,7 +126,7 @@ print(v)
 # You will see that each eigenvalue **corresponds** to the column below it, which contains the eigenvector. The **first** eigenvalue (`l[0]`) corresponds to the **first** column of the eigenvector matrix (`v[:,0]`). Observe that the lowest energy molecular orbital has **coefficients** that are all the same sign. There is **no node**, as expected.
 # 
 # ```{note}
-# *Python* **starts** all arrays at position "0". So atoms #1 in butadiene is described by **row \#0** in the matrix. Keep this in mind. Should we have numbered the diagram starting at zero? You can, just **docummnet your choices** so the reader knows what you are doing.
+# *Python* **starts** all arrays at position "0". So atoms #1 in butadiene is described by **row \#0** in the matrix. Keep this in mind. Should we have numbered the diagram starting at zero? You can, just **document your choices** so the reader knows what you are doing.
 # ```
 
 # ## MO Diagram
@@ -195,7 +195,7 @@ Filled = [2,2,0,0]
 # where *n<sub>i</sub>* is the **number** of electrons in the *i<sup>th</sup>* molecular orbital and *c<sub>i,r</sub>* is the **coefficient** of atom *r* in the *i<sup>th</sup>* molecular orbital.
 # 
 # 
-# For butadiene, the electron density will be **even across** all atoms (in the Hückel approiximation) and so all atoms should have the **same charge** of zero. 
+# For butadiene, the electron density will be **even across** all atoms (in the Hückel approximation) and so all atoms should have the **same charge** of zero. 
 
 # In[6]:
 
@@ -222,13 +222,13 @@ print("Total charge = {:.1f}".format(Total_Charge))
 # 
 # #### Bond Orders
 # 
-# Bond order is derived from the **sum** of the **products** of adjacent **coeficients** and number of **electrons**. The bond order between atoms *r* and *s* is *p<sub>r,s</sub>*. It can be expressed as&hellip;
+# Bond order is derived from the **sum** of the **products** of adjacent **coefficients** and number of **electrons**. The bond order between atoms *r* and *s* is *p<sub>r,s</sub>*. It can be expressed as&hellip;
 # 
 # $$
 # p_{r,s} = \sum_i n_i c_{i,r} c_{i,s}
 # $$
 # 
-# where *n<sub>i</sub>* is the number of electrons in the *i<sup>th</sup>* molecular orbital and *c<sub>i,r</sub>* & *c<sub>i,r</sub>* are the coefficients of adjecent atoms in the bond in that *i<sup>th</sup>* molecular orbital. **Sum it up** and you get the &pi; bond order. If *p<sub>r,s</sub>* = 1 then we have a perfect double bond.  
+# where *n<sub>i</sub>* is the number of electrons in the *i<sup>th</sup>* molecular orbital and *c<sub>i,r</sub>* & *c<sub>i,s</sub>* are the coefficients of adjacent atoms in the bond in that *i<sup>th</sup>* molecular orbital. **Sum it up** and you get the &pi; bond order. If *p<sub>r,s</sub>* = 1 then we have a perfect double bond.  
 # 
 # Applying a square function to the whole matrix was easy in the case of electron density, but now we would need to **write** a small amount of code to **iterate** through the coefficients and perform this calculation. I'm not going to do that because we will soon be using a package of code that does all this for us. It was written by **someone else** and I will not be reinventing that wheel.
 # 
@@ -255,7 +255,10 @@ print("Total charge = {:.1f}".format(Total_Charge))
 # 
 # #### Free Valence
 # The maximum valence according to HMOT for a carbon atom is 4.732. **Subtract** bond orders for each carbon atom.
-# Note $F_r = 3 + \sqrt{3}$ for tertiary carbon (three connections), $F_r = 3 + \sqrt{2}$ for secondary and $F_r = 3 + \sqrt{1}$ (or $4.0$) for primary.  In all our SHMO systems we will see each carbon connected to three other atoms so we will use $F_r = 4.732$. Heteratoms (and the corresponding changes in polarity) will change these numbers but we will ignore that. 
+# 
+# ```{Note} 
+# $F_r = 3 + \sqrt{3}$ for tertiary carbon (three connections), $F_r = 3 + \sqrt{2}$ for secondary and $F_r = 3 + \sqrt{1}$ (or $4.0$) for primary.  In all our SHMO systems we will see each carbon connected to three other atoms so we will use $F_r = 4.732$. Heteratoms (and the corresponding changes in polarity) will change these numbers but we will ignore that. 
+# ```
 # 
 # So if we **add up** all the &pi; bond orders associated with a given atom and then add the value of 1.0 for each &sigma; bond we will get the **valence** at an atom. Subtract that value from 4.732 to obtain the **free valence** value for that atom. Larger free valence values indicate a more reactive site in the molecule (due to electronic structure. Physical structure and sterics will also play an important role.)
 # 

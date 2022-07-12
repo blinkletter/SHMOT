@@ -44,7 +44,7 @@
 # 
 # ## Acrolein
 # 
-# We will explore this idea by changing onbe of the carbon atoms in butadiene to an **oxygen**. We now have **acrolein**. We will now **repeat** all the steps for butadiene, but we need to change the interaction matrix to account for the **heteroatom**.
+# We will explore this idea by changing one of the carbon atoms in butadiene to an **oxygen**. We now have **acrolein**. We will now **repeat** all the steps for butadiene, but we need to change the interaction matrix to account for the **heteroatom**.
 # 
 # 
 # ### Step 1
@@ -75,7 +75,7 @@
 # \end{bmatrix}
 # $$
 # 
-# The polar atom will **affect** the position in the matrix that it **occupies** (the *x* and position 4,4) and the **adjacent** bonds. Recall that we defined $x = \frac{\alpha – E}{\beta}$. And now we must change the value of $\alpha$ by $h_X \beta$. We will have&hellip;
+# The polar atom will **affect** the position in the matrix that it **occupies** (the *x* at position 4,4) and the **adjacent** bonds. Recall that we defined $x = \frac{\alpha – E}{\beta}$. And now we must change the value of $\alpha$ by $h_X \beta$. We will have&hellip;
 # 
 # $$
 # \begin{align*}
@@ -221,6 +221,8 @@ print("----------")
 print(f"Total electrons = {Total_Electrons:.1f}")
 print(f"Total charge = {Total_Charge:.1f}")
 
+
+# 
 
 # ## Summary
 # 

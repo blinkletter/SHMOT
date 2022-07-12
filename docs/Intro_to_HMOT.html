@@ -583,7 +583,7 @@ orbital coefficents
 <p>You will see that each eigenvalue <strong>corresponds</strong> to the column below it, which contains the eigenvector. The <strong>first</strong> eigenvalue (<code class="docutils literal notranslate"><span class="pre">l[0]</span></code>) corresponds to the <strong>first</strong> column of the eigenvector matrix (<code class="docutils literal notranslate"><span class="pre">v[:,0]</span></code>). Observe that the lowest energy molecular orbital has <strong>coefficients</strong> that are all the same sign. There is <strong>no node</strong>, as expected.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><em>Python</em> <strong>starts</strong> all arrays at position “0”. So atoms #1 in butadiene is described by <strong>row #0</strong> in the matrix. Keep this in mind. Should we have numbered the diagram starting at zero? You can, just <strong>docummnet your choices</strong> so the reader knows what you are doing.</p>
+<p><em>Python</em> <strong>starts</strong> all arrays at position “0”. So atoms #1 in butadiene is described by <strong>row #0</strong> in the matrix. Keep this in mind. Should we have numbered the diagram starting at zero? You can, just <strong>document your choices</strong> so the reader knows what you are doing.</p>
 </div>
 </div>
 </div>
@@ -645,7 +645,7 @@ The coefficents for orbital #2 are: [-0.602 -0.372  0.372  0.602]
 q_r = \sum_i n_i c_{i,r}^2
 \]</div>
 <p>where <em>n<sub>i</sub></em> is the <strong>number</strong> of electrons in the <em>i<sup>th</sup></em> molecular orbital and <em>c<sub>i,r</sub></em> is the <strong>coefficient</strong> of atom <em>r</em> in the <em>i<sup>th</sup></em> molecular orbital.</p>
-<p>For butadiene, the electron density will be <strong>even across</strong> all atoms (in the Hückel approiximation) and so all atoms should have the <strong>same charge</strong> of zero.</p>
+<p>For butadiene, the electron density will be <strong>even across</strong> all atoms (in the Hückel approximation) and so all atoms should have the <strong>same charge</strong> of zero.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Coefficients_Squared</span> <span class="o">=</span> <span class="n">v</span><span class="o">**</span><span class="mi">2</span>                                      <span class="c1"># Square all the orbital coefficients to get matrix of probabilities</span>
@@ -683,12 +683,12 @@ Total charge = -0.0
 <p>There are more <strong>electronic</strong> properties that can be obtained from the orbital coefficients.</p>
 <div class="section" id="bond-orders">
 <h4>Bond Orders<a class="headerlink" href="#bond-orders" title="Permalink to this headline">¶</a></h4>
-<p>Bond order is derived from the <strong>sum</strong> of the <strong>products</strong> of adjacent <strong>coeficients</strong> and number of <strong>electrons</strong>. The bond order between atoms <em>r</em> and <em>s</em> is <em>p<sub>r,s</sub></em>. It can be expressed as…</p>
+<p>Bond order is derived from the <strong>sum</strong> of the <strong>products</strong> of adjacent <strong>coefficients</strong> and number of <strong>electrons</strong>. The bond order between atoms <em>r</em> and <em>s</em> is <em>p<sub>r,s</sub></em>. It can be expressed as…</p>
 <div class="math notranslate nohighlight">
 \[
 p_{r,s} = \sum_i n_i c_{i,r} c_{i,s}
 \]</div>
-<p>where <em>n<sub>i</sub></em> is the number of electrons in the <em>i<sup>th</sup></em> molecular orbital and <em>c<sub>i,r</sub></em> &amp; <em>c<sub>i,r</sub></em> are the coefficients of adjecent atoms in the bond in that <em>i<sup>th</sup></em> molecular orbital. <strong>Sum it up</strong> and you get the π bond order. If <em>p<sub>r,s</sub></em> = 1 then we have a perfect double bond.</p>
+<p>where <em>n<sub>i</sub></em> is the number of electrons in the <em>i<sup>th</sup></em> molecular orbital and <em>c<sub>i,r</sub></em> &amp; <em>c<sub>i,s</sub></em> are the coefficients of adjacent atoms in the bond in that <em>i<sup>th</sup></em> molecular orbital. <strong>Sum it up</strong> and you get the π bond order. If <em>p<sub>r,s</sub></em> = 1 then we have a perfect double bond.</p>
 <p>Applying a square function to the whole matrix was easy in the case of electron density, but now we would need to <strong>write</strong> a small amount of code to <strong>iterate</strong> through the coefficients and perform this calculation. I’m not going to do that because we will soon be using a package of code that does all this for us. It was written by <strong>someone else</strong> and I will not be reinventing that wheel.</p>
 </div>
 <div class="section" id="delocalization-energy">
@@ -711,8 +711,11 @@ E_{\pi} &amp; = 4\alpha - 4.472\beta) \\
 </div>
 <div class="section" id="free-valence">
 <h4>Free Valence<a class="headerlink" href="#free-valence" title="Permalink to this headline">¶</a></h4>
-<p>The maximum valence according to HMOT for a carbon atom is 4.732. <strong>Subtract</strong> bond orders for each carbon atom.
-Note <span class="math notranslate nohighlight">\(F_r = 3 + \sqrt{3}\)</span> for tertiary carbon (three connections), <span class="math notranslate nohighlight">\(F_r = 3 + \sqrt{2}\)</span> for secondary and <span class="math notranslate nohighlight">\(F_r = 3 + \sqrt{1}\)</span> (or <span class="math notranslate nohighlight">\(4.0\)</span>) for primary.  In all our SHMO systems we will see each carbon connected to three other atoms so we will use <span class="math notranslate nohighlight">\(F_r = 4.732\)</span>. Heteratoms (and the corresponding changes in polarity) will change these numbers but we will ignore that.</p>
+<p>The maximum valence according to HMOT for a carbon atom is 4.732. <strong>Subtract</strong> bond orders for each carbon atom.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(F_r = 3 + \sqrt{3}\)</span> for tertiary carbon (three connections), <span class="math notranslate nohighlight">\(F_r = 3 + \sqrt{2}\)</span> for secondary and <span class="math notranslate nohighlight">\(F_r = 3 + \sqrt{1}\)</span> (or <span class="math notranslate nohighlight">\(4.0\)</span>) for primary.  In all our SHMO systems we will see each carbon connected to three other atoms so we will use <span class="math notranslate nohighlight">\(F_r = 4.732\)</span>. Heteratoms (and the corresponding changes in polarity) will change these numbers but we will ignore that.</p>
+</div>
 <p>So if we <strong>add up</strong> all the π bond orders associated with a given atom and then add the value of 1.0 for each σ bond we will get the <strong>valence</strong> at an atom. Subtract that value from 4.732 to obtain the <strong>free valence</strong> value for that atom. Larger free valence values indicate a more reactive site in the molecule (due to electronic structure. Physical structure and sterics will also play an important role.)</p>
 </div>
 <div class="section" id="freeloading">
