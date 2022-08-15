@@ -31,7 +31,7 @@
 # - `.net_charges`
 #     - A *NumPy* array of the net charge (due to $\pi$ electrons) on each atom.
 # - `.bond_orders`
-#     - a *NumPy* matrix with bond orders. Look to the cells that **correspond** to bonds to get the order of the $\pi$ bond between the two referenced atoms. e.g. cell 2,3 will contain the bon order between atoms 2 and atom 3. cells that do not reference bonds contain values but are not important.
+#     - a *NumPy* matrix with bond orders. Look to the cells that **correspond** to bonds to get the order of the $\pi$ bond between the two referenced atoms (e.g., cell 2,3 will contain the bond order between atoms 2 and atom 3). Cells that do not reference bonds contain values but are not important.
 # - `.energy_eigens`
 #     - This is a **combination** of `.energies` and `.energies`. It is a list of lists for each orbital. Each sublist contains the orbital energy and the corresponding array of eigenvectors.
 # - `.populated_levels`
@@ -107,6 +107,12 @@ Result = HuckelSolver(z,n)
 # ### Step 4: Display and Manipulate the Result
 # We now have all the information we need to **interpret** a Hückel system. Let us use some code to **print out** the results. I created a **library** that contains a single function called `Print_It_All()`. If we **pass** the HuckelSolver object to this function, it will **print** all the results that we are interested in. The file `print_shmo.py` contains the code needed. Make sure it is in the **same directory** as this notebook. 
 
+# In[ ]:
+
+
+
+
+
 # In[5]:
 
 
@@ -135,8 +141,11 @@ Print_It_All(Result, Name)
 # 
 # **Download** the Jupyter notebook for this chapter and **edit** it to remove all the stuff you dont want (my boring words, for example). Create a **lean and mean** SHMOT machine. You now will have a tool for all your future SHMOT calculations. Just **change** the data and **execute** the notebook.
 
-# In[ ]:
-
-
-
-
+# ## Documentation
+# 
+# The following *Python* commands were demonstrated in this workbook. They arte gathered here with links to the *Python* documentation.
+# 
+# The documentation for the **NumPy** library can be found [here](https://numpy.org/doc/stable/).
+# 
+# - [numpy.array()](https://numpy.org/doc/stable/reference/generated/numpy.array.html)
+# - [shmo.HuckelSolver()](https://github.com/randlet/SHMO)

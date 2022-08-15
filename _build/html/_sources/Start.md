@@ -1,4 +1,4 @@
-# Front Matter
+# SHMOT
 
 ## Preface
 
@@ -21,4 +21,8 @@ Including **adjustments** in the interaction matrix to account for **differences
 ### 4. [HückelSolver](SHMO_Github_tool)
 
 Using the **HuckelSolver package** to obtain information from HMOT systems. Future calculations will **use** the HückelSolver tool.
+
+### 5. [An Example](benzene_cation)
+
+Using the HuckelSolver package to calculate the **molecular orbitals** and partial **charges** in the benzyl cation.
 

@@ -29,20 +29,20 @@
 # [^ref3]: "Heteroatom parameters in Hückel Theory", Timothy Hughbanks
 # obtained on June 15, 2022 at \[[Link](https://www.chem.tamu.edu/rgroup/hughbanks/courses/673/handouts/Huckel_Heteroatom_parameters.pdf)\]
 # 
-# [^ref4]: Neil Isaacs, *Physical Organic Chemistry, 2nd ed.*, **1995**, Addison Wesley Longman, Harlow Essex, England. ISBN 9780582218635, page 18.
+# [^ref4]: Ian Flemming, *Molecular Orbitals and Organic Chemical Reactions*, **2010**, Wiley. ISBN 9780470746585.
 # 
-# Below is a short table of **selected** $h_X$ and $k_X$ values (from Isaacs[^ref4]). Note that in the "number of electrons" column, one electron implies the atom is participating in a **covalent** &pi; bond and two electrons implies that the atom is donating a **lone pair** into the &pi; system. Also note that the first entry is for *sp<sup>2</sup>* carbon and the values of $h_X$ and $k_X$ will not alter the matrix.
+# Below is a short table of **selected** $h_X$ and $k_X$ values (from Flemming, pg. 59[^ref4]). Note that in the "number of electrons" column, one electron implies the atom is participating in a **covalent** &pi; bond and two electrons implies that the atom is donating a **lone pair** into the &pi; system. Also note that the first entry is for *sp<sup>2</sup>* carbon and the values of $h_X$ and $k_X$ will not alter the matrix.
 # 
-#  | Atom               | # of $e^-$ | $h_X$ | $k_X$ |
+#  | Atom               | # of e<sup>–</sup> | $h_X$ | $k_X$ |
 #  | :---               |    :---:   | :---  | :---  |
 #  |   =C               | 1          | 0     | 1.0   |
 #  |   =N               | 1          | 0.5   | 1.0   |
-#  |   –N:              | 2          | 0.5   | 0.8   |
+#  |   –N:              | 2          | 1.4   | 0.9   |
 #  |   =O               | 1          | 1.0   | 1.0   |
 #  |   –O:              | 2          | 2.0   | 0.8   |
 #  |   –CH<sub>3</sub>  | 2          | 2.0   | 0.7   |
 # 
-# ## Acrolein
+# ## Acrolein 
 # 
 # We will explore this idea by changing one of the carbon atoms in butadiene to an **oxygen**. We now have **acrolein**. We will now **repeat** all the steps for butadiene, but we need to change the interaction matrix to account for the **heteroatom**.
 # 
@@ -228,4 +228,15 @@ print(f"Total charge = {Total_Charge:.1f}")
 # 
 # We have explored constructing an interaction matrix for a polar molecule and calculating the **molecular orbitals** using SHMOT. In the example of **acrolein** we observe that the molecule has an uneven distribution of charge, as expected.
 
+# ## Documentation
 # 
+# The following *Python* commands were demonstrated in this workbook. They arte gathered here with links to the *Python* documentation.
+# 
+# The documentation for the **NumPy** library can be found [here](https://numpy.org/doc/stable/).
+# 
+# - [numpy.array()](https://numpy.org/doc/stable/reference/generated/numpy.array.html)
+# - [numpy.argsort()](https://numpy.org/doc/stable/reference/generated/numpy.argsort.html)
+# - [numpy.linalg.eig()](https://numpy.org/doc/stable/reference/generated/numpy.linalg.eig.html)
+# - [numpy.shape()](https://numpy.org/doc/stable/reference/generated/numpy.shape.html)
+# - [numpy.sum()](https://numpy.org/doc/stable/reference/generated/numpy.sum.html)
+# - [numpy.set_printoptions()](https://numpy.org/doc/stable/reference/generated/numpy.set_printoptions.html)

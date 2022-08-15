@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tufte.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -95,8 +96,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Start.html">
-   Front Matter
+  <a class="reference internal" href="start.html">
+   SHMOT
   </a>
  </li>
 </ul>
@@ -212,7 +213,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/barrylinkletter/SHMOT/main?urlpath=tree/docs/SHMO_Github_tool.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/barrylinkletter/SHMOT/main?urlpath=tree/SHMO_Github_tool.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -269,6 +270,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-challenge">
    A Challenge
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
   </a>
  </li>
 </ul>
@@ -328,6 +334,11 @@ const thebe_selector_output = ".output, .cell_output"
    A Challenge
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -380,7 +391,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.bond_orders</span></code></p>
 <ul>
-<li><p>a <em>NumPy</em> matrix with bond orders. Look to the cells that <strong>correspond</strong> to bonds to get the order of the <span class="math notranslate nohighlight">\(\pi\)</span> bond between the two referenced atoms. e.g. cell 2,3 will contain the bon order between atoms 2 and atom 3. cells that do not reference bonds contain values but are not important.</p></li>
+<li><p>a <em>NumPy</em> matrix with bond orders. Look to the cells that <strong>correspond</strong> to bonds to get the order of the <span class="math notranslate nohighlight">\(\pi\)</span> bond between the two referenced atoms (e.g., cell 2,3 will contain the bond order between atoms 2 and atom 3). Cells that do not reference bonds contain values but are not important.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.energy_eigens</span></code></p>
@@ -538,6 +549,15 @@ from &#39;Result.bond_orders&#39;
 <div class="section" id="a-challenge">
 <h2>A Challenge<a class="headerlink" href="#a-challenge" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong> the Jupyter notebook for this chapter and <strong>edit</strong> it to remove all the stuff you dont want (my boring words, for example). Create a <strong>lean and mean</strong> SHMOT machine. You now will have a tool for all your future SHMOT calculations. Just <strong>change</strong> the data and <strong>execute</strong> the notebook.</p>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>The following <em>Python</em> commands were demonstrated in this workbook. They arte gathered here with links to the <em>Python</em> documentation.</p>
+<p>The documentation for the <strong>NumPy</strong> library can be found <a class="reference external" href="https://numpy.org/doc/stable/">here</a>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">numpy.array()</a></p></li>
+<li><p><a class="reference external" href="https://github.com/randlet/SHMO">shmo.HuckelSolver()</a></p></li>
+</ul>
 </div>
 <div class="toctree-wrapper compound">
 </div>

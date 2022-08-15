@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tufte.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -92,8 +93,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Start.html">
-   Front Matter
+  <a class="reference internal" href="start.html">
+   SHMOT
   </a>
  </li>
 </ul>
@@ -209,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/barrylinkletter/SHMOT/main?urlpath=tree/docs/benzene_cation.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/barrylinkletter/SHMOT/main?urlpath=tree/benzene_cation.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -286,6 +287,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#be-prepared">
    Be Prepared
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
   </a>
  </li>
 </ul>
@@ -365,6 +371,11 @@ const thebe_selector_output = ".output, .cell_output"
    Be Prepared
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -376,22 +387,22 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="example">
 <h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h1>
-<p>How is SHMOT useful? It is mostly a teaching tool. Calculating the coefficients and electronic properties will build a better understanding of conjugation, aromaticity and reactivity. Let us use the example of the benzyl cation.</p>
+<p>How is SHMOT <strong>useful</strong>? It is mostly a teaching tool. Calculating the coefficients and electronic properties will build a better understanding of <strong>conjugation</strong>, <strong>aromaticity</strong> and <strong>reactivity</strong>. Let us use the example of the <strong>benzyl cation</strong>.</p>
 <div class="section" id="the-benzyl-cation">
 <h2>The Benzyl Cation<a class="headerlink" href="#the-benzyl-cation" title="Permalink to this headline">¶</a></h2>
-<p>Nothing is as electron withdrawing as a carbocation. The benzyl cation would be an extreme example of an electron-withdrawing group.</p>
+<p>Perhaps nothing is as <strong>electron withdrawing</strong> as a carbocation. The benzyl cation would be an extreme example of an electron-withdrawing group.</p>
 <div class="section" id="step-1-number-the-atoms">
 <h3>Step 1: Number the Atoms<a class="headerlink" href="#step-1-number-the-atoms" title="Permalink to this headline">¶</a></h3>
-<p>We will draw the benzyl cation and number the atoms.</p>
+<p>We will <strong>draw</strong> the benzyl cation and <strong>number</strong> the atoms.</p>
 <div class="figure align-default" id="benzylcation">
 <a class="reference internal image-reference" href="_images/benzylcation.png"><img alt="_images/benzylcation.png" src="_images/benzylcation.png" style="width: 100px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text"><em>The benzyl cation</em></span><a class="headerlink" href="#benzylcation" title="Permalink to this image">¶</a></p>
 </div>
-<p>Is the positive charge really on the atom as shown? HMOT will reveal all.</p>
+<p>Is the <strong>positive charge</strong> really on the atom as shown? HMOT will reveal all.</p>
 </div>
 <div class="section" id="step-2-create-the-interaction-matrix">
 <h3>Step 2: Create The Interaction Matrix<a class="headerlink" href="#step-2-create-the-interaction-matrix" title="Permalink to this headline">¶</a></h3>
-<p>I will copy and paste the python code from the previous chapter for the benzyl cation. I could easily type it in myself but since it already exists I will use it.</p>
+<p>I will <strong>copy and paste</strong> the <em>Python</em> code from the previous chapter for the benzyl cation. I could easily type it in myself but since <strong>it already exists</strong> I will use it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
@@ -497,8 +508,8 @@ from &#39;Result.bond_orders&#39;
 </div>
 <div class="section" id="mo-diagram">
 <h2>MO Diagram<a class="headerlink" href="#mo-diagram" title="Permalink to this headline">¶</a></h2>
-<p>First, lets construct a MO diagram using the coefficients and energies. Observe that the LUMO has the largest coefficients at the benzyl carbon and the <em>ortho</em> and <em>para</em> positions. This where nucleophiles might add into. Nucleophiles will add to the benzyl cation where the largest part of the empty LUMO is located.</p>
-<p>But we are interested in how an EWG affects electrophilic aromatic substitution. The HOMO shows the coefficients are greatest in the <em>meta</em> and <em>ortho</em> positions. We know that EWG deactivate the <em>ortho</em> and <em>para</em> sites and that would leave the <em>meta</em> carbon as the location for electrophilic substitution.</p>
+<p>First, lets <strong>construct</strong> a MO diagram using the coefficients and energies. <strong>Observe</strong> that the LUMO has the largest coefficients at the benzyl carbon and the <em>ortho</em> and <em>para</em> positions. This where <strong>nucleophiles</strong> might add. Nucleophiles can add to the benzyl cation where the largest part of the empty LUMO is located.</p>
+<p>But we are interested in <strong>how</strong> an EWG affects <strong>electrophilic aromatic substitution</strong>. The HOMO shows the coefficients are greatest in the <em>meta</em> and <em>ortho</em> positions. We know that EWG <strong>deactivate</strong> the <em>ortho</em> and <em>para</em> sites and that would <strong>leave</strong> the <em>meta</em> carbon as the location for electrophilic substitution.</p>
 <div class="figure align-default" id="benzylcationmo">
 <a class="reference internal image-reference" href="_images/benzylcationMO.png"><img alt="_images/benzylcationMO.png" src="_images/benzylcationMO.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text"><em>The benzyl cation Hückel molecular orbital diagram</em></span><a class="headerlink" href="#benzylcationmo" title="Permalink to this image">¶</a></p>
@@ -506,7 +517,7 @@ from &#39;Result.bond_orders&#39;
 </div>
 <div class="section" id="bond-orders">
 <h2>Bond Orders<a class="headerlink" href="#bond-orders" title="Permalink to this headline">¶</a></h2>
-<p>In benzene, all the bonds would have a π order of 0.5 and a total bond order of 1.5. I read the data off the tables above and made this image. You can see that there is no longer perfect symmetry but the bonds are still all partialilly double bonds. The bond to the benzyl cation is drawn as a single bond but clearly has significant double bond character due to conjugation.</p>
+<p>In <strong>benzene</strong>, all the bonds would have a π order of 0.5 and a total bond order of 1.5. I read the <strong>data</strong> for the benzyl cation off the tables above and made this image. You can see that there is no longer perfect symmetry but the bonds are still all <strong>partially</strong> double bonds. The bond to the benzyl cation is drawn as a single bond but clearly has significant double bond character due to <strong>conjugation</strong>.</p>
 <div class="figure align-default" id="benzylcationbondorder">
 <a class="reference internal image-reference" href="_images/benzylcationbondorder.png"><img alt="_images/benzylcationbondorder.png" src="_images/benzylcationbondorder.png" style="width: 200px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text"><em>The bond orders in the benzyl cation HMOT model</em></span><a class="headerlink" href="#benzylcationbondorder" title="Permalink to this image">¶</a></p>
@@ -514,7 +525,7 @@ from &#39;Result.bond_orders&#39;
 </div>
 <div class="section" id="electron-density">
 <h2>Electron Density<a class="headerlink" href="#electron-density" title="Permalink to this headline">¶</a></h2>
-<p>I read the reported values for electron density and created this diagram. You can see the greatest electron density where an electrophilic aromatic substitution could take place is the <em>meta</em> position.</p>
+<p>I read the reported values for electron density and created this <strong>diagram</strong>. You can see the <strong>greatest</strong> electron density where an electrophilic aromatic substitution could take place is the <em>meta</em> position.</p>
 <div class="figure align-default" id="benzylcationelectrondensity">
 <a class="reference internal image-reference" href="_images/benzylcationelectrondensity.png"><img alt="_images/benzylcationelectrondensity.png" src="_images/benzylcationelectrondensity.png" style="width: 200px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text"><em>The electron density in the benzyl cation HMOT model</em></span><a class="headerlink" href="#benzylcationelectrondensity" title="Permalink to this image">¶</a></p>
@@ -522,7 +533,7 @@ from &#39;Result.bond_orders&#39;
 </div>
 <div class="section" id="partial-charges">
 <h2>Partial Charges<a class="headerlink" href="#partial-charges" title="Permalink to this headline">¶</a></h2>
-<p>I read the charges from the result data and created the following diagram. We can see that the largest charge is indeed resident on the benzyl carbon. With the positive charge also shared at the ortho and para positions. An electrom deficient carbon is unlikely to attach an electrophile. The <em>meta</em> carbon is all that left.</p>
+<p>I read the charges from the result data and created the following <strong>diagram</strong>. We can see that the <strong>largest</strong> charge is indeed resident on the benzyl carbon. With the positive charge also shared at the ortho and para positions. An electron-deficient carbon is <strong>unlikely</strong> to attach an electrophile. The <em>meta</em> carbon is all that is left.</p>
 <div class="figure align-default" id="benzylcationcharges">
 <a class="reference internal image-reference" href="_images/benzylcationcharges.png"><img alt="_images/benzylcationcharges.png" src="_images/benzylcationcharges.png" style="width: 200px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text"><em>The electron density in the benzyl cation HMOT model</em></span><a class="headerlink" href="#benzylcationcharges" title="Permalink to this image">¶</a></p>
@@ -530,13 +541,22 @@ from &#39;Result.bond_orders&#39;
 </div>
 <div class="section" id="a-challenge">
 <h2>A Challenge<a class="headerlink" href="#a-challenge" title="Permalink to this headline">¶</a></h2>
-<p>Repeat the exact calculation above but add two electrons to model the idea of a benzyl anion. That would be a very effective electron dinating group, would it not? What is the HOMO now? Would that HOMO enable electrophilic addition and the <em>ortho</em> and <em>para</em> positions as we would expect? How are charges and electron density affected? What are the bond orders? draw new diagrams to collate this information and draw conclusions.</p>
-<p>Perhaps a better model for an electron donating group would be a methyl group (toluene). Perhaps a better model for an electron withdrawing group would be a carbonyl group (benzaldehyde). Model those and examine the <em>ortho</em>,<em>meta</em>,<em>para</em> changes in the benzene ring.</p>
-<p>We are limited in the choices of structure as we want to keep our Hückel systems simple. We could model nitrobenzene if we wanted to, but the polar parameter adjustments would be more complicated. The references in chapter 3 will give you details about that if you want to go there.</p>
+<p><strong>Repeat</strong> the calculation above but <strong>add</strong> two electrons to model the idea of a benzyl <strong>anion</strong>. That would be a very effective <strong>electron-donating</strong> group, would it not? What is the HOMO now? Would that HOMO <strong>enable</strong> electrophilic addition at the <em>ortho</em> and <em>para</em> positions as we would expect? How are <strong>charges</strong> and electron density affected? What are the <strong>bond orders</strong>? Draw new <strong>diagrams</strong> to collate this information and make conclusions.</p>
+<p>Perhaps a <strong>better model</strong> for an <strong>electron-donating</strong> group would be a methyl group (toluene) or oxide (phenol anion). Perhaps a better model for an <strong>electron-withdrawing</strong> group would be a carbonyl group (benzaldehyde). Model those and examine the <em>ortho</em>,<em>meta</em>,<em>para</em> changes in the benzene ring.</p>
+<p>We are <strong>limited</strong> in the choices of structure as we want to keep our Hückel systems <strong>simple</strong>. We could model nitrobenzene if we wanted to, but the polar parameter adjustments would be more complicated. The references in <a class="reference internal" href="Polar_Atoms_HMOT.html"><span class="doc std std-doc">chapter 3</span></a> will give you <strong>details</strong> about that if you want to go there.</p>
 </div>
 <div class="section" id="be-prepared">
 <h2>Be Prepared<a class="headerlink" href="#be-prepared" title="Permalink to this headline">¶</a></h2>
-<p>We will be discussing the electronic properties of naphthaline and azulene in class. The interaction matrices are all set up for you in chapter 4. Use them and calculate all the properties demonstrated in this worksheet. Make some diagrams and predict the regiochemistry in both cases. Are these molecules non-polar – or are the surprisingly polar?</p>
+<p>We will be discussing the electronic properties of <strong>naphthaline</strong> and <strong>azulene</strong> in class. The interaction matrices are all set up for you in <a class="reference internal" href="SHMO_Github_more.html"><span class="doc std std-doc">chapter 4</span></a>. Use them and <strong>calculate</strong> all the properties demonstrated in this worksheet. Make some diagrams and predict the regiochemistry in both cases. Are these molecules <strong>non-polar</strong> – or are the surprisingly <strong>polar</strong>?</p>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>The following <em>Python</em> commands were demonstrated in this workbook. They arte gathered here with links to the <em>Python</em> documentation.</p>
+<p>The documentation for the <strong>NumPy</strong> library can be found <a class="reference external" href="https://numpy.org/doc/stable/">here</a>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">numpy.array()</a></p></li>
+<li><p><a class="reference external" href="https://github.com/randlet/SHMO">shmo.HuckelSolver()</a></p></li>
+</ul>
 </div>
 </div>
 

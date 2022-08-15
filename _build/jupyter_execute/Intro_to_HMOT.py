@@ -271,4 +271,17 @@ print("Total charge = {:.1f}".format(Total_Charge))
 # We have explored constructing an **interaction matrix** as a *NumPy* array and using the `eig()` function to obtain the eigenvalues and eigenvectors. We have **demonstrated** this with butadiene and used the results to calculate the **electron density** and **partial charge** at each atom.
 # 
 
+# ## Documentation
+# 
+# The following *Python* commands were demonstrated in this workbook. They arte gathered here with links to the *Python* documentation.
+# 
+# The documentation for the **NumPy** library can be found [here](https://numpy.org/doc/stable/).
+# 
+# - [numpy.array()](https://numpy.org/doc/stable/reference/generated/numpy.array.html)
+# - [numpy.argsort()](https://numpy.org/doc/stable/reference/generated/numpy.argsort.html)
+# - [numpy.linalg.eig()](https://numpy.org/doc/stable/reference/generated/numpy.linalg.eig.html)
+# - [numpy.shape()](https://numpy.org/doc/stable/reference/generated/numpy.shape.html)
+# - [numpy.sum()](https://numpy.org/doc/stable/reference/generated/numpy.sum.html)
+# - [numpy.set_printoptions()](https://numpy.org/doc/stable/reference/generated/numpy.set_printoptions.html)
+
 # 
