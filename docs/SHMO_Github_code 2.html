@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Libraries &#8212; SHMOT</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example" href="benzene_cation.html" />
+    <link rel="prev" title="More Molecules" href="SHMO_Github_more.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/matrix.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SHMOT</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Start.html">
+   SHMOT
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Basics.html">
+   HMO Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro_to_HMOT.html">
+   HMOT with
+   <em>
+    Python
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Polar_Atoms_HMOT.html">
+   HMOT with Polar Atoms
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="SHMO_Github_tool.html">
+   HückelSolver
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="SHMO_Github_more.html">
+     More Molecules
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     The Libraries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="benzene_cation.html">
+   Example
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/SHMO_Github_code.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/barrylinkletter/SHMOT/main?urlpath=tree/docs/SHMO_Github_code.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The Libraries</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-libraries">
+<h1>The Libraries<a class="headerlink" href="#the-libraries" title="Permalink to this headline">¶</a></h1>
+<p>Below are <strong>printouts</strong> of the two software libraries for your information. The first, “print_shmo.py”, is just a list of commands that I wrote to print out information from the HuckelSolver object. It represents the limits of my <em>Python</em> skill set. The second, “shmo.py”, is from <a class="reference external" href="https://github.com/randlet/SHMO">https://github.com/randlet/SHMO</a>. If this book did not come with the accompanying <code class="docutils literal notranslate"><span class="pre">print_shmo.py</span></code> and <code class="docutils literal notranslate"><span class="pre">shmo.py</span></code> files then you will be able to <strong>recreate</strong> them using the code below.</p>
+<p><strong>print_shmo.py</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="k">def</span> <span class="nf">Print_It_All</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;No Name&quot;</span><span class="p">):</span>
+
+    <span class="n">numpy</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># set print precision to 3 decimal places (only applies to numpy arrays and matices)</span>
+    <span class="n">numpy</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># suppress scientific notation</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Results for&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Energies and Eigenvalues&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;from &#39;Result.energies&#39; and &#39;numpy.array(Result.eigen_vectors).T)&#39;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Result</span><span class="o">.</span><span class="n">energies</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Result</span><span class="o">.</span><span class="n">eigen_vectors</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="c1"># Transforms the list of arrays into a 2-dimensional array with columns matching each orbital energy.</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Energies and Probabilities (Magnitudes)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;from &#39;Result.energies&#39; and &#39;numpy.array(Result.eigen_vectors).T)**2&#39;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Result</span><span class="o">.</span><span class="n">energies</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">((</span><span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Result</span><span class="o">.</span><span class="n">eigen_vectors</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Electron Densities&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;from &#39;Result.charge_densities&#39;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Result</span><span class="o">.</span><span class="n">charge_densities</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Net Atomic Charges&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;from &#39;Result.net_charges&#39;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Result</span><span class="o">.</span><span class="n">net_charges</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Net Molecular Charge: </span><span class="si">{:.1f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">Result</span><span class="o">.</span><span class="n">net_charges</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bond Orders&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;from &#39;Result.bond_orders&#39;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Result</span><span class="o">.</span><span class="n">bond_orders</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>shmo.py</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># from https://github.com/randlet/SHMO/tree/master/shmo</span>
+<span class="c1">#</span>
+
+<span class="kn">import</span> <span class="nn">collections</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="n">PopulatedLevel</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;PopulatedLevel&quot;</span><span class="p">,[</span><span class="s2">&quot;energy&quot;</span><span class="p">,</span><span class="s2">&quot;eigen_vector&quot;</span><span class="p">,</span><span class="s2">&quot;num_electrons&quot;</span><span class="p">])</span>
+
+<span class="n">MAX_ELECTRONS_PER_LEVEL</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">EPSILON</span> <span class="o">=</span> <span class="mf">1E-10</span> <span class="c1">#equality test</span>
+<span class="n">ROUND_TO</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">numpy</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">EPSILON</span><span class="p">))</span>
+
+<span class="c1">#====================================================================================</span>
+<span class="k">class</span> <span class="nc">HuckelSolver</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;class for solving (Eigen values/vectors) of Simple Huckel Molecular Orbitals&quot;&quot;&quot;</span>
+
+    <span class="c1">#----------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">num_electrons</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;SHMO system solver</span>
+<span class="sd">        </span>
+<span class="sd">        Keyword Arguments:</span>
+<span class="sd">        data -- square input matrix representing bonds between atoms         </span>
+<span class="sd">        num_electrons -- optional number of electrons for system.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span>  <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">num_electrons</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">num_electrons</span><span class="p">)</span>
+    <span class="c1">#---------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">set_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">num_electrons</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;set SHMO data and solve the system for the input data matrix and number of electrons</span>
+<span class="sd">        </span>
+<span class="sd">        Keyword Arguments:</span>
+<span class="sd">        data -- square input matrix representing bonds between atoms         </span>
+<span class="sd">        num_electrons -- optional number of electrons for system.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid input data. Input data must be a square matrix&quot;</span><span class="p">)</span>
+        
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_electrons</span> <span class="o">=</span> <span class="n">num_electrons</span>
+        <span class="k">if</span> <span class="n">num_electrons</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">num_electrons</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_electrons</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Number of electrons(</span><span class="si">%d</span><span class="s2">) must be greater than zero and less than or equal to 2*number of atoms (</span><span class="si">%d</span><span class="s2">)&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_electrons</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="p">))</span>
+    
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solve</span><span class="p">()</span>
+    <span class="c1">#---------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">set_num_electrons</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">num_electons</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;convenience method to update number of electrons for system&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span><span class="n">num_electrons</span><span class="o">=</span><span class="n">num_electons</span><span class="p">)</span>
+    <span class="c1">#---------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">_solve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Recalculate all SHMO parameters&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solve_eigens</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_populate_levels</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_calc_bond_orders</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_calc_charges</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_calc_aa_polarizability</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_calc_ab_polarizability</span><span class="p">()</span>
+        
+    <span class="c1">#---------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">_solve_eigens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;calculate eigenvalues (energies) and eigen vectors&quot;&quot;&quot;</span>
+        
+        <span class="n">vals</span><span class="p">,</span><span class="n">vecs</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        
+        <span class="c1">#round so that we can test for degeneracy e.g so 0.6800000000000001 == 0.68 is considered degenerate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">energies</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span><span class="n">decimals</span><span class="o">=</span><span class="n">ROUND_TO</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eigen_vectors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">vecs</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">energy_eigens</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+        
+        <span class="k">for</span> <span class="n">e</span><span class="p">,</span><span class="n">vec</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">energies</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">eigen_vectors</span><span class="p">):</span>
+            <span class="n">vectors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">energy_eigens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">e</span><span class="p">,[])</span>
+            <span class="n">vectors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">energy_eigens</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="n">vectors</span>
+            
+    <span class="c1">#---------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">_populate_levels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;set electron population of each energy level&quot;&quot;&quot;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">populated_levels</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">electrons_left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_electrons</span>
+
+        <span class="k">for</span> <span class="n">energy</span><span class="p">,</span> <span class="n">eigenvecs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">energy_eigens</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            
+            <span class="n">degeneracy</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">eigenvecs</span><span class="p">)</span>
+            <span class="n">electrons_per_degen_level</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">MAX_ELECTRONS_PER_LEVEL</span><span class="p">,</span> <span class="n">electrons_left</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">degeneracy</span><span class="p">))</span>
+            <span class="n">electrons_left</span> <span class="o">-=</span> <span class="n">electrons_per_degen_level</span><span class="o">*</span><span class="n">degeneracy</span>
+            
+            <span class="k">for</span> <span class="n">eigenvec</span> <span class="ow">in</span> <span class="n">eigenvecs</span><span class="p">:</span>
+                <span class="n">populated_level</span> <span class="o">=</span> <span class="n">PopulatedLevel</span><span class="p">(</span><span class="n">energy</span><span class="o">=</span><span class="n">energy</span><span class="p">,</span><span class="n">eigen_vector</span><span class="o">=</span><span class="n">eigenvec</span><span class="p">,</span><span class="n">num_electrons</span><span class="o">=</span><span class="n">electrons_per_degen_level</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">populated_levels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">populated_level</span><span class="p">)</span>
+                
+    <span class="c1">#---------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">_calc_bond_orders</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;calculate pi bond orders for system&quot;&quot;&quot;</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bond_orders</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span><span class="n">size</span><span class="p">),</span><span class="n">numpy</span><span class="o">.</span><span class="n">float</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span><span class="n">size</span><span class="p">):</span>
+                <span class="n">bond_order</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ne</span><span class="o">*</span><span class="n">ev</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">*</span><span class="n">ev</span><span class="p">[</span><span class="n">jj</span><span class="p">]</span> <span class="k">for</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">ev</span><span class="p">,</span><span class="n">ne</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">populated_levels</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bond_orders</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span><span class="n">jj</span><span class="p">]</span> <span class="o">=</span> <span class="n">bond_order</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bond_orders</span><span class="p">[</span><span class="n">jj</span><span class="p">,</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">bond_order</span>
+                
+    <span class="c1">#---------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">_calc_charges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;calculate net charge per atom&quot;&quot;&quot;</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_charges</span> <span class="o">=</span>  <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bond_orders</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_charges</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">bond_orders</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span><span class="n">ii</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">charge_densities</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_charges</span> <span class="o">-</span> <span class="mf">1.</span>
+        
+    <span class="c1">#----------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">num_doubly_occupied_orbitals</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;return number of orbitals with exactly 2 electrons&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">lvl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">populated_levels</span> <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="mf">2.</span><span class="o">-</span><span class="n">lvl</span><span class="o">.</span><span class="n">num_electrons</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">EPSILON</span><span class="p">)</span>
+    
+    <span class="c1">#----------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">_calc_aa_polarizability</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Atom-Atom polarizabilities fom Computing methods in quantum organic chemistry - Greenwood: pg 54&quot;&quot;&quot;</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">aa_polar</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span><span class="n">size</span><span class="p">),</span><span class="nb">float</span><span class="p">))</span>
+        
+        <span class="n">n_dbl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_doubly_occupied_orbitals</span><span class="p">()</span>
+        <span class="n">evals</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">energies</span>
+        <span class="n">evecs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eigen_vectors</span>
+        
+        <span class="k">for</span> <span class="n">rr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">uu</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rr</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>                
+                <span class="n">aap</span> <span class="o">=</span> <span class="mf">0.</span>                
+                <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_dbl</span><span class="p">):</span>
+                    <span class="n">tmp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">evecs</span><span class="p">[</span><span class="n">kk</span><span class="p">][</span><span class="n">rr</span><span class="p">]</span><span class="o">*</span><span class="n">evecs</span><span class="p">[</span><span class="n">kk</span><span class="p">][</span><span class="n">uu</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="n">evals</span><span class="p">[</span><span class="n">jj</span><span class="p">]</span><span class="o">-</span><span class="n">evals</span><span class="p">[</span><span class="n">kk</span><span class="p">])</span> <span class="k">for</span> <span class="n">kk</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_dbl</span><span class="p">,</span><span class="n">size</span><span class="p">))</span>
+                    <span class="n">aap</span> <span class="o">+=</span> <span class="n">evecs</span><span class="p">[</span><span class="n">jj</span><span class="p">][</span><span class="n">rr</span><span class="p">]</span><span class="o">*</span><span class="n">evecs</span><span class="p">[</span><span class="n">jj</span><span class="p">][</span><span class="n">uu</span><span class="p">]</span><span class="o">*</span><span class="n">tmp</span>
+                    
+                <span class="bp">self</span><span class="o">.</span><span class="n">aa_polar</span><span class="p">[</span><span class="n">rr</span><span class="p">,</span><span class="n">uu</span><span class="p">]</span> <span class="o">=</span> <span class="n">aap</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">aa_polar</span><span class="p">[</span><span class="n">uu</span><span class="p">,</span><span class="n">rr</span><span class="p">]</span> <span class="o">=</span> <span class="n">aap</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">aa_polar</span> <span class="o">*=</span> <span class="mf">4.</span>
+        
+    <span class="c1">#----------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">bond_pairs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;return a list of 2-tuples (m,n) representing bonds between atom pairs m &amp; n&quot;&quot;&quot;</span> 
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">numpy</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">)))))</span>
+    
+    <span class="c1">#----------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">_calc_ab_polarizability</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Atom-Bond polarizabilities fom Computing methods in quantum organic chemistry - Greenwood: pg 46 eq 3-16&quot;&quot;&quot;</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">ab_polar</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_calc_single_ab</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span>
+
+    <span class="c1">#----------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">_calc_single_ab</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">uu</span><span class="p">):</span>
+
+        <span class="n">n_dbl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_doubly_occupied_orbitals</span><span class="p">()</span>
+        <span class="n">n_dbl_rng</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_dbl</span><span class="p">)</span>
+        <span class="n">n_dbl_sz_rng</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_dbl</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">evecs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eigen_vectors</span>
+        <span class="n">evals</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">energies</span>
+        
+        <span class="n">ab_polar</span> <span class="o">=</span> <span class="p">[]</span>
+                
+        <span class="k">for</span> <span class="n">ss</span><span class="p">,</span><span class="n">tt</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">bond_pairs</span><span class="p">():</span>
+                
+            <span class="n">abp</span> <span class="o">=</span> <span class="mf">0.</span>
+            <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="n">n_dbl_rng</span><span class="p">:</span>
+                <span class="n">c_uj</span> <span class="o">=</span> <span class="n">evecs</span><span class="p">[</span><span class="n">jj</span><span class="p">][</span><span class="n">uu</span><span class="p">]</span>
+                <span class="n">c_sj</span><span class="p">,</span><span class="n">c_tj</span> <span class="o">=</span> <span class="n">evecs</span><span class="p">[</span><span class="n">jj</span><span class="p">][</span><span class="n">ss</span><span class="p">],</span><span class="n">evecs</span><span class="p">[</span><span class="n">jj</span><span class="p">][</span><span class="n">tt</span><span class="p">]</span>
+                
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">c_uj</span><span class="p">)</span><span class="o">&gt;</span><span class="n">EPSILON</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">c_sj</span><span class="p">)</span><span class="o">&gt;</span><span class="n">EPSILON</span> <span class="ow">or</span> <span class="nb">abs</span><span class="p">(</span><span class="n">c_tj</span><span class="p">)</span><span class="o">&gt;</span><span class="n">EPSILON</span><span class="p">):</span>                    
+                    <span class="n">tmp</span> <span class="o">=</span> <span class="p">[</span><span class="n">evecs</span><span class="p">[</span><span class="n">kk</span><span class="p">][</span><span class="n">uu</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">c_sj</span><span class="o">*</span><span class="n">evecs</span><span class="p">[</span><span class="n">kk</span><span class="p">][</span><span class="n">tt</span><span class="p">]</span> <span class="o">+</span> <span class="n">c_tj</span><span class="o">*</span><span class="n">evecs</span><span class="p">[</span><span class="n">kk</span><span class="p">][</span><span class="n">ss</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">evals</span><span class="p">[</span><span class="n">jj</span><span class="p">]</span><span class="o">-</span><span class="n">evals</span><span class="p">[</span><span class="n">kk</span><span class="p">])</span> <span class="k">for</span> <span class="n">kk</span> <span class="ow">in</span> <span class="n">n_dbl_sz_rng</span> <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">evecs</span><span class="p">[</span><span class="n">kk</span><span class="p">][</span><span class="n">uu</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">EPSILON</span><span class="p">]</span>                            
+                    <span class="n">abp</span> <span class="o">+=</span> <span class="n">c_uj</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+
+            <span class="n">ab_polar</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="n">ss</span><span class="p">,</span><span class="n">tt</span><span class="p">),</span><span class="mi">2</span><span class="o">*</span><span class="n">abp</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">ab_polar</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="SHMO_Github_more.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">More Molecules</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="benzene_cation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Example</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Barry Linkletter<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
